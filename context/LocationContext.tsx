@@ -1,6 +1,6 @@
 import * as Location from 'expo-location';
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { City, findCityByLocation, Municipality } from '../utils/turkeyData';
+import { City, findCityByLocation, getAllCities, Municipality } from '../utils/turkeyData';
 
 interface LocationData {
   latitude: number;
@@ -13,10 +13,13 @@ interface LocationContextType {
   selectedMunicipalities: Municipality[];
   allMunicipalities: Municipality[];
   currentCity: City | null;
+  allCities: City[];
   setSelectedMunicipalities: (municipalities: Municipality[]) => void;
-  setLocationData: (locationData: LocationData) => void;
+  setLocationData: (data: LocationData | null) => void;
+  setCurrentCity: (city: City | null) => void;
   requestLocationPermission: () => Promise<void>;
   getCurrentLocation: () => Promise<void>;
+
   loading: boolean;
 }
 
@@ -35,7 +38,14 @@ export const LocationProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const [selectedMunicipalities, setSelectedMunicipalities] = useState<Municipality[]>([]);
   const [allMunicipalities, setAllMunicipalities] = useState<Municipality[]>([]);
   const [currentCity, setCurrentCity] = useState<City | null>(null);
+  const [allCities, setAllCities] = useState<City[]>([]);
   const [loading, setLoading] = useState(false);
+
+  // Tüm şehirleri yükle
+  useEffect(() => {
+    const cities = getAllCities();
+    setAllCities(cities);
+  }, []);
 
   // Konum izni isteme
   const requestLocationPermission = async () => {
@@ -96,6 +106,8 @@ export const LocationProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     }
   };
 
+
+
   // Uygulama başlangıcında konum izni iste
   useEffect(() => {
     requestLocationPermission();
@@ -106,8 +118,10 @@ export const LocationProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     selectedMunicipalities,
     allMunicipalities,
     currentCity,
+    allCities,
     setSelectedMunicipalities,
     setLocationData,
+    setCurrentCity,
     requestLocationPermission,
     getCurrentLocation,
     loading,

@@ -3,10 +3,21 @@ import * as Location from 'expo-location';
 import { router } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { ActivityIndicator, Alert, Dimensions, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
 import { Button, Card, Paragraph, Surface, Title } from 'react-native-paper';
 import { useLocation } from '../context/LocationContext';
-import { findCityByLocation, turkeyCities } from '../utils/turkeyData';
+import { City, findCityByLocation, Municipality, turkeyCities } from '../utils/turkeyData';
+
+// Harita bileşenlerini koşullu olarak import et
+let MapView: any = null;
+let Marker: any = null;
+
+try {
+  const MapModule = require('react-native-maps');
+  MapView = MapModule.default;
+  Marker = MapModule.Marker;
+} catch (error) {
+  console.log('Harita modülü yüklenemedi:', error);
+}
 
 const { width } = Dimensions.get('window');
 
@@ -39,6 +50,7 @@ export default function MunicipalitySelection() {
   });
   const [selectedMunicipality, setSelectedMunicipality] = useState<Municipality | null>(null);
   const [allMunicipalities, setAllMunicipalitiesLocal] = useState<Municipality[]>([]);
+
   
   const { locationData, setLocationData, setSelectedMunicipalities } = useLocation();
 
@@ -112,7 +124,7 @@ export default function MunicipalitySelection() {
         console.log(`Şehir bulundu: ${currentCity.name} - ${currentCity.municipalities.length} belediye`);
         
         // Şehrin tüm belediyelerini dönüştür
-        const cityMunicipalities = currentCity.municipalities.map(municipality => ({
+        const cityMunicipalities = currentCity.municipalities.map((municipality: Municipality) => ({
           id: municipality.id,
           name: municipality.name,
           type: municipality.type as 'büyükşehir' | 'ilçe',
@@ -147,8 +159,8 @@ export default function MunicipalitySelection() {
 
   const loadAllTurkeyMunicipalities = () => {
     // Tüm Türkiye'deki belediyeleri yükle (ilk 50 şehir)
-    const allMunicipalities = turkeyCities.slice(0, 50).flatMap(city => 
-      city.municipalities.map(municipality => ({
+    const allMunicipalities = turkeyCities.slice(0, 50).flatMap((city: City) => 
+      city.municipalities.map((municipality: Municipality) => ({
         id: municipality.id,
         name: municipality.name,
         type: municipality.type as 'büyükşehir' | 'ilçe',
@@ -247,6 +259,8 @@ export default function MunicipalitySelection() {
               </Surface>
             )}
 
+
+
             <View style={styles.municipalityList}>
               {/* Belediye Seçim Kartı */}
               <Surface style={styles.surface}>
@@ -305,38 +319,50 @@ export default function MunicipalitySelection() {
             </Surface>
           </View>
 
-          {/* Konum Bölümü */}
+          {/* Harita Görünümü */}
           <View style={styles.mapContainer}>
-            <MapView
-              style={styles.map}
-              region={mapRegion}
-              showsUserLocation={true}
-              showsMyLocationButton={true}
-            >
-              {locationData && (
-                <Marker
-                  coordinate={{
-                    latitude: locationData.latitude,
-                    longitude: locationData.longitude,
-                  }}
-                  title="Konumunuz"
-                  description="Şu anki konumunuz"
-                />
-              )}
-              
-              {/* Seçili belediye marker'ı */}
-              {selectedMunicipality && selectedMunicipality.coordinates && (
-                <Marker
-                  coordinate={{
-                    latitude: selectedMunicipality.coordinates.latitude,
-                    longitude: selectedMunicipality.coordinates.longitude,
-                  }}
-                  title={selectedMunicipality.name}
-                  description="Seçili belediye"
-                  pinColor="red"
-                />
-              )}
-            </MapView>
+            {MapView ? (
+              <MapView
+                style={styles.map}
+                region={mapRegion}
+                showsUserLocation={true}
+                showsMyLocationButton={true}
+              >
+                {locationData && (
+                  <Marker
+                    coordinate={{
+                      latitude: locationData.latitude,
+                      longitude: locationData.longitude,
+                    }}
+                    title="Konumunuz"
+                    description={locationData.address || 'Mevcut konum'}
+                    pinColor="#6366f1"
+                  />
+                )}
+                {selectedMunicipality && (
+                  <Marker
+                    coordinate={selectedMunicipality.coordinates}
+                    title={selectedMunicipality.name}
+                    description="Seçili Belediye"
+                    pinColor="#ff6b6b"
+                  />
+                )}
+              </MapView>
+            ) : (
+              <View style={[styles.map, { backgroundColor: '#e8f4fd', justifyContent: 'center', alignItems: 'center' }]}>
+                <Text style={{ fontSize: 16, color: '#666', textAlign: 'center' }}>
+                  📍 Harita Yükleniyor...
+                </Text>
+                <Text style={{ fontSize: 14, color: '#999', textAlign: 'center', marginTop: 8 }}>
+                  {locationData?.address || `Konum: ${locationData?.latitude?.toFixed(4)}, ${locationData?.longitude?.toFixed(4)}`}
+                </Text>
+                {selectedMunicipality && (
+                  <Text style={{ fontSize: 14, color: '#6366f1', textAlign: 'center', marginTop: 8, fontWeight: 'bold' }}>
+                    Seçili: {selectedMunicipality.name}
+                  </Text>
+                )}
+              </View>
+            )}
           </View>
 
           {/* Devam Butonu */}
@@ -504,4 +530,5 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#666',
   },
+
 }); 

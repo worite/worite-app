@@ -1641,6 +1641,9 @@ export const turkeyCities: City[] = [
 export function findCityByLocation(latitude: number, longitude: number): City | null {
   let closestCity: City | null = null;
   let minDistance = Infinity;
+  let candidates: { city: City; distance: number }[] = [];
+
+  console.log(`🔍 Konum aranıyor: ${latitude}, ${longitude}`);
 
   for (const city of turkeyCities) {
     const distance = calculateDistance(
@@ -1650,12 +1653,36 @@ export function findCityByLocation(latitude: number, longitude: number): City | 
       city.coordinates.longitude
     );
 
+    console.log(`📍 ${city.name}: ${distance.toFixed(2)} km`);
+
+    // 50 km içindeki tüm şehirleri aday olarak al
+    if (distance <= 50) {
+      candidates.push({ city, distance });
+    }
+
     if (distance < minDistance) {
       minDistance = distance;
       closestCity = city;
     }
   }
 
+  // Eğer birden fazla aday varsa ve mesafe farkı 10 km'den azsa
+  if (candidates.length > 1) {
+    candidates.sort((a, b) => a.distance - b.distance);
+    const firstDistance = candidates[0].distance;
+    const secondDistance = candidates[1].distance;
+    
+    if (secondDistance - firstDistance < 10) {
+      console.log(`⚠️ Birden fazla yakın şehir bulundu:`);
+      candidates.slice(0, 3).forEach(c => {
+        console.log(`   - ${c.city.name}: ${c.distance.toFixed(2)} km`);
+      });
+      console.log(`✅ En yakın şehir seçildi: ${candidates[0].city.name}`);
+      return candidates[0].city;
+    }
+  }
+
+  console.log(`✅ En yakın şehir: ${closestCity?.name} (${minDistance.toFixed(2)} km)`);
   return closestCity;
 }
 
