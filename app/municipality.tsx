@@ -131,7 +131,7 @@ export default function MunicipalitySelection() {
           latitudeDelta: 0.1,
           longitudeDelta: 0.1,
         });
-      } else {
+        } else {
         // Konum bulunamazsa tüm Türkiye'yi göster
         console.log('Konum bulunamadı, tüm Türkiye gösteriliyor');
         loadAllTurkeyMunicipalities();
@@ -223,33 +223,33 @@ export default function MunicipalitySelection() {
       </LinearGradient>
 
       <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
-        <View style={styles.content}>
-          {/* Konum Bilgisi Kartı */}
+                  <View style={styles.content}>
+            {/* Konum Bilgisi Kartı */}
           {locationData && (
-            <Surface style={styles.surface}>
-              <Card style={styles.locationCard}>
-                <Card.Content style={styles.cardContent}>
-                  <View style={styles.cardHeader}>
-                    <View style={styles.iconContainer}>
-                      <Text style={styles.municipalityIcon}>📍</Text>
-                    </View>
-                    <View style={styles.textContainer}>
-                      <Title style={styles.locationTitle}>
+              <Surface style={styles.surface}>
+                <Card style={styles.locationCard}>
+                  <Card.Content style={styles.cardContent}>
+                    <View style={styles.cardHeader}>
+                      <View style={styles.iconContainer}>
+                        <Text style={styles.municipalityIcon}>📍</Text>
+                      </View>
+                      <View style={styles.textContainer}>
+                        <Title style={styles.locationTitle}>
                         Konumunuz tespit edildi
-                      </Title>
-                      <Paragraph style={styles.locationSubtitle}>
-                        {locationData.address || `Enlem: ${locationData.latitude.toFixed(6)}, Boylam: ${locationData.longitude.toFixed(6)}`}
-                      </Paragraph>
+                        </Title>
+                        <Paragraph style={styles.locationSubtitle}>
+                          {locationData.address || `Enlem: ${locationData.latitude.toFixed(6)}, Boylam: ${locationData.longitude.toFixed(6)}`}
+                        </Paragraph>
+                      </View>
                     </View>
-                  </View>
-                </Card.Content>
-              </Card>
-            </Surface>
-          )}
+                  </Card.Content>
+                </Card>
+              </Surface>
+            )}
 
-          <View style={styles.municipalityList}>
-            {/* Belediye Seçim Kartı */}
-            <Surface style={styles.surface}>
+            <View style={styles.municipalityList}>
+              {/* Belediye Seçim Kartı */}
+              <Surface style={styles.surface}>
               <Card style={styles.municipalityCard}>
                 <Card.Content style={styles.cardContent}>
                   <View style={styles.cardHeader}>
@@ -286,11 +286,11 @@ export default function MunicipalitySelection() {
                       
                       buttons.push({ text: 'İptal', onPress: () => {} });
                       
-                      Alert.alert(
-                        'Belediye Seçin',
-                        'Eleştireceğiniz & Teşekkür Edeceğiniz Belediyeyi Seçiniz',
-                        buttons
-                      );
+                                              Alert.alert(
+                          'Belediye Seçin',
+                          'Eleştireceğiniz & Teşekkür Edeceğiniz Belediyeyi Seçiniz',
+                          buttons
+                        );
                     }}
                   >
                     <Text style={styles.districtButtonText}>
@@ -341,16 +341,16 @@ export default function MunicipalitySelection() {
 
           {/* Devam Butonu */}
           <View style={styles.buttonContainer}>
-            <Button
-              mode="contained"
-              onPress={handleContinue}
-              style={styles.continueButton}
+        <Button
+          mode="contained"
+          onPress={handleContinue}
+          style={styles.continueButton}
               labelStyle={styles.continueButtonText}
-              disabled={!selectedMunicipality}
-            >
-              Devam Et
-            </Button>
-          </View>
+          disabled={!selectedMunicipality}
+        >
+          Devam Et
+        </Button>
+      </View>
         </View>
       </ScrollView>
     </View>
