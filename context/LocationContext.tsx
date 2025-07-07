@@ -14,6 +14,7 @@ interface LocationContextType {
   allMunicipalities: Municipality[];
   currentCity: City | null;
   setSelectedMunicipalities: (municipalities: Municipality[]) => void;
+  setLocationData: (locationData: LocationData) => void;
   requestLocationPermission: () => Promise<void>;
   getCurrentLocation: () => Promise<void>;
   loading: boolean;
@@ -106,6 +107,7 @@ export const LocationProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     allMunicipalities,
     currentCity,
     setSelectedMunicipalities,
+    setLocationData,
     requestLocationPermission,
     getCurrentLocation,
     loading,
