@@ -141,19 +141,6 @@ export default function ReportsScreen() {
             },
           },
           {
-            id: 'sehitkamil',
-            name: 'Şehitkamil',
-            type: 'ilçe' as const,
-            totalSubmissions: 0,
-            positiveVotes: 0,
-            negativeVotes: 0,
-            topSubmissions: [],
-            coordinates: {
-              latitude: 37.0662,
-              longitude: 37.3833,
-            },
-          },
-          {
             id: 'sahinbey',
             name: 'Şahinbey',
             type: 'ilçe' as const,
@@ -303,14 +290,8 @@ export default function ReportsScreen() {
       }
     }
     
-    // Eğer seçili belediye bulunamazsa, varsayılan olarak Şehitkamil'i göster
-    const defaultReport = reports.find(report => report.name === 'Şehitkamil');
-    if (defaultReport) {
-      return defaultReport;
-    }
-    
-    // Eğer Şehitkamil de yoksa ilk belediyeyi göster
-    return reports[0];
+    // Eğer seçili belediye bulunamazsa, hiçbir şey gösterme
+    return null;
   };
 
   if (loading) {

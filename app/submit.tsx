@@ -248,7 +248,7 @@ export default function SubmitScreen() {
       if (selectedMunicipalities.length === 0) {
         const defaultMunicipality = {
           id: submission.municipalityId,
-          name: 'Şehitkamil', // Varsayılan belediye adı
+          name: 'Seçili Belediye', // Varsayılan belediye adı
           type: 'ilçe' as const
         };
         setSelectedMunicipalities([defaultMunicipality]);
