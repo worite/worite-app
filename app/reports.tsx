@@ -114,20 +114,167 @@ export default function ReportsScreen() {
       const storedEvaluations = await AsyncStorage.getItem('evaluations');
       let allEvaluations = storedEvaluations ? JSON.parse(storedEvaluations) : [];
       
-      // Eğer hiç değerlendirme yoksa, boş liste göster
+      // Varsayılan belediye listesi (Gaziantep için)
+      const defaultMunicipalities = [
+        {
+          id: 'gaziantep-buyuksehir',
+          name: 'Gaziantep Büyükşehir',
+          type: 'büyükşehir' as const,
+          totalSubmissions: 0,
+          positiveVotes: 0,
+          negativeVotes: 0,
+          topSubmissions: [],
+          coordinates: {
+            latitude: 37.0662,
+            longitude: 37.3833,
+          },
+        },
+        {
+          id: 'sehitkamil',
+          name: 'Şehitkamil',
+          type: 'ilçe' as const,
+          totalSubmissions: 0,
+          positiveVotes: 0,
+          negativeVotes: 0,
+          topSubmissions: [],
+          coordinates: {
+            latitude: 37.0662,
+            longitude: 37.3833,
+          },
+        },
+        {
+          id: 'sahinbey',
+          name: 'Şahinbey',
+          type: 'ilçe' as const,
+          totalSubmissions: 0,
+          positiveVotes: 0,
+          negativeVotes: 0,
+          topSubmissions: [],
+          coordinates: {
+            latitude: 37.0662,
+            longitude: 37.3833,
+          },
+        },
+        {
+          id: 'nurdagi',
+          name: 'Nurdağı',
+          type: 'ilçe' as const,
+          totalSubmissions: 0,
+          positiveVotes: 0,
+          negativeVotes: 0,
+          topSubmissions: [],
+          coordinates: {
+            latitude: 37.0662,
+            longitude: 37.3833,
+          },
+        },
+        {
+          id: 'araban',
+          name: 'Araban',
+          type: 'ilçe' as const,
+          totalSubmissions: 0,
+          positiveVotes: 0,
+          negativeVotes: 0,
+          topSubmissions: [],
+          coordinates: {
+            latitude: 37.0662,
+            longitude: 37.3833,
+          },
+        },
+        {
+          id: 'yavuzeli',
+          name: 'Yavuzeli',
+          type: 'ilçe' as const,
+          totalSubmissions: 0,
+          positiveVotes: 0,
+          negativeVotes: 0,
+          topSubmissions: [],
+          coordinates: {
+            latitude: 37.0662,
+            longitude: 37.3833,
+          },
+        },
+        {
+          id: 'oguzeli',
+          name: 'Oğuzeli',
+          type: 'ilçe' as const,
+          totalSubmissions: 0,
+          positiveVotes: 0,
+          negativeVotes: 0,
+          topSubmissions: [],
+          coordinates: {
+            latitude: 37.0662,
+            longitude: 37.3833,
+          },
+        },
+        {
+          id: 'karkamis',
+          name: 'Karkamış',
+          type: 'ilçe' as const,
+          totalSubmissions: 0,
+          positiveVotes: 0,
+          negativeVotes: 0,
+          topSubmissions: [],
+          coordinates: {
+            latitude: 37.0662,
+            longitude: 37.3833,
+          },
+        },
+        {
+          id: 'nisan',
+          name: 'Nizip',
+          type: 'ilçe' as const,
+          totalSubmissions: 0,
+          positiveVotes: 0,
+          negativeVotes: 0,
+          topSubmissions: [],
+          coordinates: {
+            latitude: 37.0662,
+            longitude: 37.3833,
+          },
+        },
+        {
+          id: 'islahiye',
+          name: 'İslahiye',
+          type: 'ilçe' as const,
+          totalSubmissions: 0,
+          positiveVotes: 0,
+          negativeVotes: 0,
+          topSubmissions: [],
+          coordinates: {
+            latitude: 37.0662,
+            longitude: 37.3833,
+          },
+        }
+      ];
+      
+      // Eğer hiç değerlendirme yoksa, varsayılan listeyi göster
       if (allEvaluations.length === 0) {
-        setReports([]);
+        setReports(defaultMunicipalities);
         return;
       }
       
       // Belediyeleri ve sayaçları gerçek değerlendirmelerden oluştur
       const municipalityMap: { [id: string]: MunicipalityReport } = {};
       
+      // Önce varsayılan belediyeleri ekle (sayaçları 0 ile)
+      defaultMunicipalities.forEach(municipality => {
+        municipalityMap[municipality.id] = {
+          ...municipality,
+          totalSubmissions: 0,
+          positiveVotes: 0,
+          negativeVotes: 0,
+          topSubmissions: []
+        };
+      });
+      
+      // Sonra gerçek değerlendirmeleri ekle
       allEvaluations.forEach((evaluation: any) => {
         // Belediye ID'sini doğru şekilde al
         const municipalityId = evaluation.municipalityId || evaluation.municipalityName;
         const municipalityName = evaluation.municipalityName || 'Bilinmeyen Belediye';
         
+        // Eğer belediye map'te yoksa ekle
         if (!municipalityMap[municipalityId]) {
           municipalityMap[municipalityId] = {
             id: municipalityId,
