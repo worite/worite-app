@@ -62,7 +62,7 @@ export default function ReportsScreen() {
   const [resetInput, setResetInput] = useState('');
   const inputRef = useRef<TextInput>(null);
   
-  const { locationData, selectedMunicipalities, allMunicipalities } = useLocation();
+  const { locationData, selectedMunicipalities, allMunicipalities, currentCity } = useLocation();
 
   useEffect(() => {
     loadReports();
@@ -74,7 +74,7 @@ export default function ReportsScreen() {
         longitudeDelta: 0.1,
       });
     }
-  }, [locationData]);
+  }, [locationData, currentCity]);
 
   // Font boyutunu hesapla
   useEffect(() => {
@@ -114,157 +114,42 @@ export default function ReportsScreen() {
       const storedEvaluations = await AsyncStorage.getItem('evaluations');
       let allEvaluations = storedEvaluations ? JSON.parse(storedEvaluations) : [];
       
-      // Varsayılan belediye listesi (Gaziantep için)
-      const defaultMunicipalities = [
-        {
-          id: 'gaziantep-buyuksehir',
-          name: 'Gaziantep Büyükşehir',
-          type: 'büyükşehir' as const,
+      // Eğer hiç değerlendirme yoksa ve konum belirlenmişse, o şehrin belediyelerini göster
+      if (allEvaluations.length === 0 && currentCity) {
+        const defaultMunicipalities = currentCity.municipalities.map(municipality => ({
+          id: municipality.id,
+          name: municipality.name,
+          type: municipality.type as 'büyükşehir' | 'ilçe',
           totalSubmissions: 0,
           positiveVotes: 0,
           negativeVotes: 0,
           topSubmissions: [],
-          coordinates: {
-            latitude: 37.0662,
-            longitude: 37.3833,
-          },
-        },
-        {
-          id: 'sehitkamil',
-          name: 'Şehitkamil',
-          type: 'ilçe' as const,
-          totalSubmissions: 0,
-          positiveVotes: 0,
-          negativeVotes: 0,
-          topSubmissions: [],
-          coordinates: {
-            latitude: 37.0662,
-            longitude: 37.3833,
-          },
-        },
-        {
-          id: 'sahinbey',
-          name: 'Şahinbey',
-          type: 'ilçe' as const,
-          totalSubmissions: 0,
-          positiveVotes: 0,
-          negativeVotes: 0,
-          topSubmissions: [],
-          coordinates: {
-            latitude: 37.0662,
-            longitude: 37.3833,
-          },
-        },
-        {
-          id: 'nurdagi',
-          name: 'Nurdağı',
-          type: 'ilçe' as const,
-          totalSubmissions: 0,
-          positiveVotes: 0,
-          negativeVotes: 0,
-          topSubmissions: [],
-          coordinates: {
-            latitude: 37.0662,
-            longitude: 37.3833,
-          },
-        },
-        {
-          id: 'araban',
-          name: 'Araban',
-          type: 'ilçe' as const,
-          totalSubmissions: 0,
-          positiveVotes: 0,
-          negativeVotes: 0,
-          topSubmissions: [],
-          coordinates: {
-            latitude: 37.0662,
-            longitude: 37.3833,
-          },
-        },
-        {
-          id: 'yavuzeli',
-          name: 'Yavuzeli',
-          type: 'ilçe' as const,
-          totalSubmissions: 0,
-          positiveVotes: 0,
-          negativeVotes: 0,
-          topSubmissions: [],
-          coordinates: {
-            latitude: 37.0662,
-            longitude: 37.3833,
-          },
-        },
-        {
-          id: 'oguzeli',
-          name: 'Oğuzeli',
-          type: 'ilçe' as const,
-          totalSubmissions: 0,
-          positiveVotes: 0,
-          negativeVotes: 0,
-          topSubmissions: [],
-          coordinates: {
-            latitude: 37.0662,
-            longitude: 37.3833,
-          },
-        },
-        {
-          id: 'karkamis',
-          name: 'Karkamış',
-          type: 'ilçe' as const,
-          totalSubmissions: 0,
-          positiveVotes: 0,
-          negativeVotes: 0,
-          topSubmissions: [],
-          coordinates: {
-            latitude: 37.0662,
-            longitude: 37.3833,
-          },
-        },
-        {
-          id: 'nisan',
-          name: 'Nizip',
-          type: 'ilçe' as const,
-          totalSubmissions: 0,
-          positiveVotes: 0,
-          negativeVotes: 0,
-          topSubmissions: [],
-          coordinates: {
-            latitude: 37.0662,
-            longitude: 37.3833,
-          },
-        },
-        {
-          id: 'islahiye',
-          name: 'İslahiye',
-          type: 'ilçe' as const,
-          totalSubmissions: 0,
-          positiveVotes: 0,
-          negativeVotes: 0,
-          topSubmissions: [],
-          coordinates: {
-            latitude: 37.0662,
-            longitude: 37.3833,
-          },
-        }
-      ];
-      
-      // Eğer hiç değerlendirme yoksa, varsayılan listeyi göster
-      if (allEvaluations.length === 0) {
+          coordinates: municipality.coordinates,
+        }));
         setReports(defaultMunicipalities);
+        return;
+      }
+      
+      // Eğer konum belirlenmemişse, boş liste göster
+      if (!currentCity) {
+        setReports([]);
         return;
       }
       
       // Belediyeleri ve sayaçları gerçek değerlendirmelerden oluştur
       const municipalityMap: { [id: string]: MunicipalityReport } = {};
       
-      // Önce varsayılan belediyeleri ekle (sayaçları 0 ile)
-      defaultMunicipalities.forEach(municipality => {
+      // Önce mevcut şehrin tüm belediyelerini ekle (sayaçları 0 ile)
+      currentCity.municipalities.forEach(municipality => {
         municipalityMap[municipality.id] = {
-          ...municipality,
+          id: municipality.id,
+          name: municipality.name,
+          type: municipality.type as 'büyükşehir' | 'ilçe',
           totalSubmissions: 0,
           positiveVotes: 0,
           negativeVotes: 0,
-          topSubmissions: []
+          topSubmissions: [],
+          coordinates: municipality.coordinates
         };
       });
       
@@ -285,8 +170,8 @@ export default function ReportsScreen() {
             negativeVotes: 0,
             topSubmissions: [],
             coordinates: {
-              latitude: evaluation.location?.latitude || 37.0662,
-              longitude: evaluation.location?.longitude || 37.3833,
+              latitude: evaluation.location?.latitude || currentCity.coordinates.latitude,
+              longitude: evaluation.location?.longitude || currentCity.coordinates.longitude,
             },
           };
         }
@@ -406,9 +291,11 @@ export default function ReportsScreen() {
         style={styles.headerGradient}
       >
         <View style={styles.header}>
-          <Title style={styles.pageTitle}>📊 Belediye Worite Puanları</Title>
+          <Title style={styles.pageTitle}>
+            📊 {currentCity ? `${currentCity.name} Belediye Worite Puanları` : 'Belediye Worite Puanları'}
+          </Title>
           <Paragraph style={styles.pageSubtitle}>
-            Kamuya açık belediye performans raporları
+            {currentCity ? `${currentCity.name} kamuya açık belediye performans raporları` : 'Kamuya açık belediye performans raporları'}
           </Paragraph>
         </View>
       </LinearGradient>
