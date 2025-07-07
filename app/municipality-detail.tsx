@@ -33,18 +33,8 @@ export default function MunicipalityDetailScreen() {
   const [imageModalVisible, setImageModalVisible] = useState(false);
 
   useEffect(() => {
-    clearAllData();
     loadEvaluations();
   }, []);
-
-  const clearAllData = async () => {
-    try {
-      await AsyncStorage.removeItem('evaluations');
-      console.log('Municipality detail sayfasında tüm veriler temizlendi');
-    } catch (error) {
-      console.error('Veri temizleme hatası:', error);
-    }
-  };
 
   const loadEvaluations = async () => {
     try {

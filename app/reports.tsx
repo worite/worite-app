@@ -65,7 +65,6 @@ export default function ReportsScreen() {
   const { locationData, selectedMunicipalities, allMunicipalities } = useLocation();
 
   useEffect(() => {
-    clearAllData();
     loadReports();
     if (locationData) {
       setMapRegion({
@@ -76,15 +75,6 @@ export default function ReportsScreen() {
       });
     }
   }, [locationData]);
-
-  const clearAllData = async () => {
-    try {
-      await AsyncStorage.removeItem('evaluations');
-      console.log('Reports sayfasında tüm veriler temizlendi');
-    } catch (error) {
-      console.error('Veri temizleme hatası:', error);
-    }
-  };
 
   // Font boyutunu hesapla
   useEffect(() => {
@@ -124,104 +114,61 @@ export default function ReportsScreen() {
       const storedEvaluations = await AsyncStorage.getItem('evaluations');
       let allEvaluations = storedEvaluations ? JSON.parse(storedEvaluations) : [];
       
-      // Eğer hiç değerlendirme yoksa, varsayılan belediye listesi oluştur
+      // Eğer hiç değerlendirme yoksa, boş liste göster
       if (allEvaluations.length === 0) {
-        const defaultMunicipalities = [
-          {
-            id: 'gaziantep-buyuksehir',
-            name: 'Gaziantep Büyükşehir',
-            type: 'büyükşehir' as const,
-            totalSubmissions: 0,
-            positiveVotes: 0,
-            negativeVotes: 0,
-            topSubmissions: [],
-            coordinates: {
-              latitude: 37.0662,
-              longitude: 37.3833,
-            },
-          },
-          {
-            id: 'sahinbey',
-            name: 'Şahinbey',
-            type: 'ilçe' as const,
-            totalSubmissions: 0,
-            positiveVotes: 0,
-            negativeVotes: 0,
-            topSubmissions: [],
-            coordinates: {
-              latitude: 37.0662,
-              longitude: 37.3833,
-            },
-          },
-          {
-            id: 'nurdagi',
-            name: 'Nurdağı',
-            type: 'ilçe' as const,
-            totalSubmissions: 0,
-            positiveVotes: 0,
-            negativeVotes: 0,
-            topSubmissions: [],
-            coordinates: {
-              latitude: 37.0662,
-              longitude: 37.3833,
-            },
-          },
-          {
-            id: 'araban',
-            name: 'Araban',
-            type: 'ilçe' as const,
-            totalSubmissions: 0,
-            positiveVotes: 0,
-            negativeVotes: 0,
-            topSubmissions: [],
-            coordinates: {
-              latitude: 37.0662,
-              longitude: 37.3833,
-            },
-          }
-        ];
-        setReports(defaultMunicipalities);
+        setReports([]);
         return;
       }
       
       // Belediyeleri ve sayaçları gerçek değerlendirmelerden oluştur
       const municipalityMap: { [id: string]: MunicipalityReport } = {};
+      
       allEvaluations.forEach((evaluation: any) => {
-        const id = evaluation.municipalityName;
-        if (!municipalityMap[id]) {
-          municipalityMap[id] = {
-            id: id,
-            name: evaluation.municipalityName,
-            type: 'ilçe', // veya 'büyükşehir' - burada gerekirse ek mantık eklenebilir
+        // Belediye ID'sini doğru şekilde al
+        const municipalityId = evaluation.municipalityId || evaluation.municipalityName;
+        const municipalityName = evaluation.municipalityName || 'Bilinmeyen Belediye';
+        
+        if (!municipalityMap[municipalityId]) {
+          municipalityMap[municipalityId] = {
+            id: municipalityId,
+            name: municipalityName,
+            type: 'ilçe', // Varsayılan olarak ilçe
             totalSubmissions: 0,
             positiveVotes: 0,
             negativeVotes: 0,
             topSubmissions: [],
             coordinates: {
-              latitude: evaluation.location?.latitude || 0,
-              longitude: evaluation.location?.longitude || 0,
+              latitude: evaluation.location?.latitude || 37.0662,
+              longitude: evaluation.location?.longitude || 37.3833,
             },
           };
         }
-        municipalityMap[id].totalSubmissions++;
-        if (evaluation.type === 'positive') {
-          municipalityMap[id].positiveVotes++;
-        } else if (evaluation.type === 'negative') {
-          municipalityMap[id].negativeVotes++;
+        
+        municipalityMap[municipalityId].totalSubmissions++;
+        
+        // Vote tipini doğru şekilde kontrol et
+        if (evaluation.vote === 'positive' || evaluation.type === 'positive') {
+          municipalityMap[municipalityId].positiveVotes++;
+        } else if (evaluation.vote === 'negative' || evaluation.type === 'negative') {
+          municipalityMap[municipalityId].negativeVotes++;
         }
-        // En iyi değerlendirmeler için eklenebilir
-        municipalityMap[id].topSubmissions.push({
-          id: evaluation.id,
-          description: evaluation.description,
-          vote: evaluation.type,
-          createdAt: evaluation.date,
-          score: 1 // Gerçek skor mantığı eklenebilir
+        
+        // En iyi değerlendirmeler için ekle
+        municipalityMap[municipalityId].topSubmissions.push({
+          id: evaluation.id || Date.now().toString(),
+          description: evaluation.description || '',
+          vote: (evaluation.vote || evaluation.type) as 'positive' | 'negative',
+          createdAt: evaluation.date || new Date().toISOString(),
+          score: 1
         });
       });
+      
       const finalReports = Object.values(municipalityMap);
       setReports(finalReports);
+      
     } catch (error) {
       console.error('Raporlar yüklenemedi:', error);
+      setReports([]);
     } finally {
       setLoading(false);
     }
@@ -283,7 +230,9 @@ export default function ReportsScreen() {
     // Context'ten seçili belediyeyi bul
     if (selectedMunicipalities && selectedMunicipalities.length > 0) {
       const selectedReport = reports.find(report => 
-        selectedMunicipalities.some(selected => selected.name === report.name)
+        selectedMunicipalities.some(selected => 
+          selected.id === report.id || selected.name === report.name
+        )
       );
       if (selectedReport) {
         return selectedReport;

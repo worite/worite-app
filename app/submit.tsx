@@ -61,19 +61,12 @@ export default function SubmitScreen() {
   // const [cooldownInfo, setCooldownInfo] = useState<any>(null);
   // const [cooldownLoading, setCooldownLoading] = useState(true);
 
-  // Uygulama başlangıcında tüm verileri temizle
+  // Uygulama başlangıcında veri temizleme işlemini kaldırdık
+  // Artık sadece puanlama yapıldığında veriler kaydedilecek
   useEffect(() => {
-    clearAllData();
+    // Uygulama başlangıcında veri temizleme işlemini kaldırdık
+    // Artık sadece puanlama yapıldığında veriler kaydedilecek
   }, []);
-
-  const clearAllData = async () => {
-    try {
-      await AsyncStorage.removeItem('evaluations');
-      console.log('Tüm değerlendirme verileri temizlendi');
-    } catch (error) {
-      console.error('Veri temizleme hatası:', error);
-    }
-  };
 
   // useEffect(() => {
   //   // Test için: Değerlendirme verilerini sıfırla
