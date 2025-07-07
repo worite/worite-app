@@ -46,7 +46,7 @@ export default function SubmitScreen() {
   const scrollViewRef = useRef<ScrollView>(null);
   const descriptionInputRef = useRef<RNTextInput>(null);
   const descriptionSectionRef = useRef<View>(null);
-  const { locationData, selectedMunicipalities } = useLocation();
+  const { locationData, selectedMunicipalities, setSelectedMunicipalities } = useLocation();
   
   const [submission, setSubmission] = useState<Submission>({
     photo: null,
@@ -230,56 +230,47 @@ export default function SubmitScreen() {
 
   const handleSubmit = async () => {
     if (!submission.photo) {
-      Alert.alert('Uyarı', 'Lütfen bir fotoğraf ekleyin.');
+      Alert.alert('Fotoğraf Gerekli', 'Lütfen bir fotoğraf çekin.');
       return;
     }
-
     if (!submission.vote) {
-      Alert.alert('Uyarı', 'Lütfen bir değerlendirme yapın.');
+      Alert.alert('Puanlama Gerekli', 'Lütfen pozitif veya negatif puanlama yapın.');
       return;
     }
-
     if (!submission.description.trim()) {
-      Alert.alert('Uyarı', 'Lütfen bir açıklama yazın.');
+      Alert.alert('Açıklama Gerekli', 'Lütfen değerlendirmenizi açıklayın.');
       return;
     }
 
     setLoading(true);
     try {
-      // Seçili belediyeleri al
-      const selectedMunicipality = selectedMunicipalities[0];
-      if (!selectedMunicipality) {
-        Alert.alert('Hata', 'Belediye seçimi bulunamadı.');
-        return;
+      // Seçili belediyeyi context'e kaydet
+      if (selectedMunicipalities.length === 0) {
+        const defaultMunicipality = {
+          id: submission.municipalityId,
+          name: 'Şehitkamil', // Varsayılan belediye adı
+          type: 'ilçe' as const
+        };
+        setSelectedMunicipalities([defaultMunicipality]);
       }
 
-      // Yeni değerlendirme oluştur
-      const newEvaluation = {
-        id: Date.now().toString(), // Basit ID oluşturma
-        date: new Date().toISOString().split('T')[0], // YYYY-MM-DD formatı
-        time: new Date().toLocaleTimeString('tr-TR', { 
-          hour: '2-digit', 
-          minute: '2-digit' 
-        }),
+      // Değerlendirme verisini oluştur
+      const evaluation = {
+        id: Date.now().toString(),
+        photo: submission.photo,
         type: submission.vote,
-        description: submission.description,
-        location: {
-          latitude: locationData?.latitude || 0,
-          longitude: locationData?.longitude || 0,
-          address: locationData?.address || 'Bilinmiyor'
-        },
-        image: submission.photo,
-        municipalityName: selectedMunicipality.name
+        description: submission.description.trim(),
+        municipalityName: selectedMunicipalities.length > 0 ? selectedMunicipalities[0].name : 'Şehitkamil',
+        date: new Date().toISOString().split('T')[0],
+        time: new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' }),
+        location: submission.location,
+        image: submission.photo
       };
 
-      // Mevcut değerlendirmeleri al
+      // Mevcut değerlendirmeleri yükle ve yenisini ekle
       const existingEvaluations = await AsyncStorage.getItem('evaluations');
       const evaluations = existingEvaluations ? JSON.parse(existingEvaluations) : [];
-      
-      // Yeni değerlendirmeyi ekle
-      evaluations.push(newEvaluation);
-      
-      // AsyncStorage'a kaydet
+      evaluations.push(evaluation);
       await AsyncStorage.setItem('evaluations', JSON.stringify(evaluations));
       
       // Başarı mesajı göster ve otomatik olarak raporlar sayfasına yönlendir

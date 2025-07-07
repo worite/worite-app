@@ -141,8 +141,8 @@ export default function ReportsScreen() {
             },
           },
           {
-            id: 'sahinbey',
-            name: 'Şahinbey',
+            id: 'sehitkamil',
+            name: 'Şehitkamil',
             type: 'ilçe' as const,
             totalSubmissions: 0,
             positiveVotes: 0,
@@ -154,8 +154,8 @@ export default function ReportsScreen() {
             },
           },
           {
-            id: 'sehitkamil',
-            name: 'Şehitkamil',
+            id: 'sahinbey',
+            name: 'Şahinbey',
             type: 'ilçe' as const,
             totalSubmissions: 0,
             positiveVotes: 0,
@@ -293,7 +293,7 @@ export default function ReportsScreen() {
   const getUserSelectedMunicipality = () => {
     if (reports.length === 0) return null;
     
-    // Context'ten seçili belediyeyi bul (name ile eşleşme)
+    // Context'ten seçili belediyeyi bul
     if (selectedMunicipalities && selectedMunicipalities.length > 0) {
       const selectedReport = reports.find(report => 
         selectedMunicipalities.some(selected => selected.name === report.name)
@@ -303,7 +303,13 @@ export default function ReportsScreen() {
       }
     }
     
-    // Eğer seçili belediye bulunamazsa ilk belediyeyi göster
+    // Eğer seçili belediye bulunamazsa, varsayılan olarak Şehitkamil'i göster
+    const defaultReport = reports.find(report => report.name === 'Şehitkamil');
+    if (defaultReport) {
+      return defaultReport;
+    }
+    
+    // Eğer Şehitkamil de yoksa ilk belediyeyi göster
     return reports[0];
   };
 
