@@ -9752,6 +9752,8 @@ export function findCityByLocation(latitude: number, longitude: number): City | 
   let closestCity: City | null = null;
   let minDistance = Infinity;
 
+  console.log(`Konum aranıyor: ${latitude}, ${longitude}`);
+
   for (const city of turkeyCities) {
     const distance = calculateDistance(
       latitude, 
@@ -9760,13 +9762,16 @@ export function findCityByLocation(latitude: number, longitude: number): City | 
       city.coordinates.longitude
     );
     
-    // 50 km içindeki en yakın şehri bul
-    if (distance < minDistance && distance <= 50) {
+    console.log(`${city.name}: ${distance.toFixed(2)} km`);
+    
+    // En yakın şehri bul (mesafe sınırı kaldırıldı)
+    if (distance < minDistance) {
       minDistance = distance;
       closestCity = city;
     }
   }
 
+  console.log(`En yakın şehir: ${closestCity?.name} (${minDistance.toFixed(2)} km)`);
   return closestCity;
 }
 
