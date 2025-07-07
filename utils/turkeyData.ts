@@ -232,8 +232,15 @@ export const turkeyCities: City[] = [
     plateNumber: 11,
     coordinates: { latitude: 40.1451, longitude: 29.9799 },
     municipalities: [
-      { id: 'bilecik-merkez', name: 'Bilecik Merkez', type: 'ilçe', coordinates: { latitude: 40.1451, longitude: 29.9799 } },
-      { id: 'bozuyuk', name: 'Bozüyük', type: 'ilçe', coordinates: { latitude: 39.9083, longitude: 30.0367 } }
+      { id: 'bilecik-buyuksehir', name: 'Bilecik Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 40.1451, longitude: 29.9799 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 40.1451, longitude: 29.9799 } },
+      { id: 'bozuyuk', name: 'Bozüyük', type: 'ilçe', coordinates: { latitude: 39.9083, longitude: 30.0367 } },
+      { id: 'osmaneli', name: 'Osmaneli', type: 'ilçe', coordinates: { latitude: 40.3500, longitude: 30.0167 } },
+      { id: 'sogut', name: 'Söğüt', type: 'ilçe', coordinates: { latitude: 40.0167, longitude: 30.1833 } },
+      { id: 'golpazari', name: 'Gölpazarı', type: 'ilçe', coordinates: { latitude: 40.2833, longitude: 30.3167 } },
+      { id: 'pazaryeri', name: 'Pazaryeri', type: 'ilçe', coordinates: { latitude: 39.9833, longitude: 29.9167 } },
+      { id: 'yenipazar', name: 'Yenipazar', type: 'ilçe', coordinates: { latitude: 40.1833, longitude: 30.5167 } },
+      { id: 'inhisar', name: 'İnhisar', type: 'ilçe', coordinates: { latitude: 40.0500, longitude: 30.3833 } }
     ]
   },
   {
@@ -242,8 +249,15 @@ export const turkeyCities: City[] = [
     plateNumber: 12,
     coordinates: { latitude: 38.8855, longitude: 40.4966 },
     municipalities: [
-      { id: 'bingol-merkez', name: 'Bingöl Merkez', type: 'ilçe', coordinates: { latitude: 38.8855, longitude: 40.4966 } },
-      { id: 'genc', name: 'Genç', type: 'ilçe', coordinates: { latitude: 38.7500, longitude: 40.5500 } }
+      { id: 'bingol-buyuksehir', name: 'Bingöl Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 38.8855, longitude: 40.4966 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 38.8855, longitude: 40.4966 } },
+      { id: 'genc', name: 'Genç', type: 'ilçe', coordinates: { latitude: 38.7500, longitude: 40.5500 } },
+      { id: 'solhan', name: 'Solhan', type: 'ilçe', coordinates: { latitude: 38.9667, longitude: 41.0500 } },
+      { id: 'karlıova', name: 'Karlıova', type: 'ilçe', coordinates: { latitude: 39.3000, longitude: 41.0167 } },
+      { id: 'adakli', name: 'Adaklı', type: 'ilçe', coordinates: { latitude: 39.2333, longitude: 40.4833 } },
+      { id: 'kiği', name: 'Kiğı', type: 'ilçe', coordinates: { latitude: 39.3167, longitude: 40.3500 } },
+      { id: 'yayladere', name: 'Yayladere', type: 'ilçe', coordinates: { latitude: 39.2167, longitude: 40.0667 } },
+      { id: 'yedisu', name: 'Yedisu', type: 'ilçe', coordinates: { latitude: 39.4333, longitude: 40.5500 } }
     ]
   },
   {
@@ -252,8 +266,14 @@ export const turkeyCities: City[] = [
     plateNumber: 13,
     coordinates: { latitude: 38.4006, longitude: 42.1095 },
     municipalities: [
-      { id: 'bitlis-merkez', name: 'Bitlis Merkez', type: 'ilçe', coordinates: { latitude: 38.4006, longitude: 42.1095 } },
-      { id: 'tatvan', name: 'Tatvan', type: 'ilçe', coordinates: { latitude: 38.5083, longitude: 42.2833 } }
+      { id: 'bitlis-buyuksehir', name: 'Bitlis Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 38.4006, longitude: 42.1095 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 38.4006, longitude: 42.1095 } },
+      { id: 'tatvan', name: 'Tatvan', type: 'ilçe', coordinates: { latitude: 38.5083, longitude: 42.2833 } },
+      { id: 'ahlat', name: 'Ahlat', type: 'ilçe', coordinates: { latitude: 38.7500, longitude: 42.4833 } },
+      { id: 'hizan', name: 'Hizan', type: 'ilçe', coordinates: { latitude: 38.2167, longitude: 42.4167 } },
+      { id: 'mutki', name: 'Mutki', type: 'ilçe', coordinates: { latitude: 38.4167, longitude: 41.9167 } },
+      { id: 'guroymak', name: 'Güroymak', type: 'ilçe', coordinates: { latitude: 38.5833, longitude: 42.0167 } },
+      { id: 'adilcevaz', name: 'Adilcevaz', type: 'ilçe', coordinates: { latitude: 38.8000, longitude: 42.7333 } }
     ]
   },
   {
@@ -262,8 +282,15 @@ export const turkeyCities: City[] = [
     plateNumber: 14,
     coordinates: { latitude: 40.7397, longitude: 31.6113 },
     municipalities: [
-      { id: 'bolu-merkez', name: 'Bolu Merkez', type: 'ilçe', coordinates: { latitude: 40.7397, longitude: 31.6113 } },
-      { id: 'gerede', name: 'Gerede', type: 'ilçe', coordinates: { latitude: 40.8000, longitude: 32.2000 } }
+      { id: 'bolu-buyuksehir', name: 'Bolu Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 40.7397, longitude: 31.6113 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 40.7397, longitude: 31.6113 } },
+      { id: 'gerede', name: 'Gerede', type: 'ilçe', coordinates: { latitude: 40.8000, longitude: 32.2000 } },
+      { id: 'mengen', name: 'Mengen', type: 'ilçe', coordinates: { latitude: 40.9333, longitude: 31.9667 } },
+      { id: 'mudurnu', name: 'Mudurnu', type: 'ilçe', coordinates: { latitude: 40.4667, longitude: 31.2167 } },
+      { id: 'seben', name: 'Seben', type: 'ilçe', coordinates: { latitude: 40.4167, longitude: 31.5667 } },
+      { id: 'dortdivan', name: 'Dörtdivan', type: 'ilçe', coordinates: { latitude: 40.7167, longitude: 31.9667 } },
+      { id: 'yeniçaga', name: 'Yeniçağa', type: 'ilçe', coordinates: { latitude: 40.7667, longitude: 32.0333 } },
+      { id: 'kibriscik', name: 'Kıbrıscık', type: 'ilçe', coordinates: { latitude: 40.4000, longitude: 31.8500 } }
     ]
   },
   {
@@ -272,8 +299,17 @@ export const turkeyCities: City[] = [
     plateNumber: 15,
     coordinates: { latitude: 37.7205, longitude: 30.2906 },
     municipalities: [
-      { id: 'burdur-merkez', name: 'Burdur Merkez', type: 'ilçe', coordinates: { latitude: 37.7205, longitude: 30.2906 } },
-      { id: 'bucak', name: 'Bucak', type: 'ilçe', coordinates: { latitude: 37.4667, longitude: 30.2833 } }
+      { id: 'burdur-buyuksehir', name: 'Burdur Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 37.7205, longitude: 30.2906 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 37.7205, longitude: 30.2906 } },
+      { id: 'bucak', name: 'Bucak', type: 'ilçe', coordinates: { latitude: 37.4667, longitude: 30.2833 } },
+      { id: 'tefenni', name: 'Tefenni', type: 'ilçe', coordinates: { latitude: 37.3167, longitude: 29.7833 } },
+      { id: 'yesilova', name: 'Yeşilova', type: 'ilçe', coordinates: { latitude: 37.5000, longitude: 29.7500 } },
+      { id: 'aglasun', name: 'Ağlasun', type: 'ilçe', coordinates: { latitude: 37.6500, longitude: 30.5333 } },
+      { id: 'golhisar', name: 'Gölhisar', type: 'ilçe', coordinates: { latitude: 37.1333, longitude: 29.5000 } },
+      { id: 'cavdir', name: 'Çavdır', type: 'ilçe', coordinates: { latitude: 37.1500, longitude: 29.7000 } },
+      { id: 'altinyayla', name: 'Altınyayla', type: 'ilçe', coordinates: { latitude: 37.0000, longitude: 29.5500 } },
+      { id: 'celtikci', name: 'Çeltikçi', type: 'ilçe', coordinates: { latitude: 37.5333, longitude: 30.4833 } },
+      { id: 'kemer', name: 'Kemer', type: 'ilçe', coordinates: { latitude: 37.3500, longitude: 30.0667 } }
     ]
   },
   {
@@ -284,7 +320,21 @@ export const turkeyCities: City[] = [
     municipalities: [
       { id: 'bursa-buyuksehir', name: 'Bursa Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 40.1885, longitude: 29.0610 } },
       { id: 'nilufer', name: 'Nilüfer', type: 'ilçe', coordinates: { latitude: 40.2167, longitude: 29.0667 } },
-      { id: 'osmangazi', name: 'Osmangazi', type: 'ilçe', coordinates: { latitude: 40.1833, longitude: 29.0667 } }
+      { id: 'osmangazi', name: 'Osmangazi', type: 'ilçe', coordinates: { latitude: 40.1833, longitude: 29.0667 } },
+      { id: 'yildirim', name: 'Yıldırım', type: 'ilçe', coordinates: { latitude: 40.1833, longitude: 29.0667 } },
+      { id: 'mudanya', name: 'Mudanya', type: 'ilçe', coordinates: { latitude: 40.3667, longitude: 28.8833 } },
+      { id: 'gemlik', name: 'Gemlik', type: 'ilçe', coordinates: { latitude: 40.4333, longitude: 29.1500 } },
+      { id: 'iznik', name: 'İznik', type: 'ilçe', coordinates: { latitude: 40.4333, longitude: 29.7167 } },
+      { id: 'orhangazi', name: 'Orhangazi', type: 'ilçe', coordinates: { latitude: 40.4833, longitude: 29.3000 } },
+      { id: 'karacabey', name: 'Karacabey', type: 'ilçe', coordinates: { latitude: 40.2167, longitude: 28.3500 } },
+      { id: 'mustafakemalpasa', name: 'Mustafakemalpaşa', type: 'ilçe', coordinates: { latitude: 40.0333, longitude: 28.4167 } },
+      { id: 'inegol', name: 'İnegöl', type: 'ilçe', coordinates: { latitude: 40.0833, longitude: 29.5167 } },
+      { id: 'yenisehir', name: 'Yenişehir', type: 'ilçe', coordinates: { latitude: 40.2667, longitude: 29.6500 } },
+      { id: 'kestel', name: 'Kestel', type: 'ilçe', coordinates: { latitude: 40.2000, longitude: 29.2167 } },
+      { id: 'harmancik', name: 'Harmancık', type: 'ilçe', coordinates: { latitude: 39.6833, longitude: 29.1500 } },
+      { id: 'buyukorhan', name: 'Büyükorhan', type: 'ilçe', coordinates: { latitude: 39.7667, longitude: 28.8833 } },
+      { id: 'orhaneli', name: 'Orhaneli', type: 'ilçe', coordinates: { latitude: 39.9000, longitude: 28.9833 } },
+      { id: 'keles', name: 'Keles', type: 'ilçe', coordinates: { latitude: 39.9167, longitude: 29.2333 } }
     ]
   },
   {
@@ -293,8 +343,18 @@ export const turkeyCities: City[] = [
     plateNumber: 17,
     coordinates: { latitude: 40.1553, longitude: 26.4142 },
     municipalities: [
-      { id: 'canakkale-merkez', name: 'Çanakkale Merkez', type: 'ilçe', coordinates: { latitude: 40.1553, longitude: 26.4142 } },
-      { id: 'biga', name: 'Biga', type: 'ilçe', coordinates: { latitude: 40.2281, longitude: 27.2422 } }
+      { id: 'canakkale-buyuksehir', name: 'Çanakkale Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 40.1553, longitude: 26.4142 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 40.1553, longitude: 26.4142 } },
+      { id: 'biga', name: 'Biga', type: 'ilçe', coordinates: { latitude: 40.2281, longitude: 27.2422 } },
+      { id: 'gelibolu', name: 'Gelibolu', type: 'ilçe', coordinates: { latitude: 40.4000, longitude: 26.6667 } },
+      { id: 'ezine', name: 'Ezine', type: 'ilçe', coordinates: { latitude: 39.7833, longitude: 26.3333 } },
+      { id: 'bayramic', name: 'Bayramiç', type: 'ilçe', coordinates: { latitude: 39.8167, longitude: 26.6167 } },
+      { id: 'yenice', name: 'Yenice', type: 'ilçe', coordinates: { latitude: 39.9333, longitude: 27.2667 } },
+      { id: 'ayvacik', name: 'Ayvacık', type: 'ilçe', coordinates: { latitude: 39.6000, longitude: 26.4000 } },
+      { id: 'lapseki', name: 'Lapseki', type: 'ilçe', coordinates: { latitude: 40.3500, longitude: 26.6833 } },
+      { id: 'eceabat', name: 'Eceabat', type: 'ilçe', coordinates: { latitude: 40.1833, longitude: 26.3667 } },
+      { id: 'gokceada', name: 'Gökçeada', type: 'ilçe', coordinates: { latitude: 40.2000, longitude: 25.9000 } },
+      { id: 'bozcaada', name: 'Bozcaada', type: 'ilçe', coordinates: { latitude: 39.8333, longitude: 26.0667 } }
     ]
   },
   {
@@ -303,8 +363,19 @@ export const turkeyCities: City[] = [
     plateNumber: 18,
     coordinates: { latitude: 40.6013, longitude: 33.6134 },
     municipalities: [
-      { id: 'cankiri-merkez', name: 'Çankırı Merkez', type: 'ilçe', coordinates: { latitude: 40.6013, longitude: 33.6134 } },
-      { id: 'kursunlu', name: 'Kurşunlu', type: 'ilçe', coordinates: { latitude: 40.8333, longitude: 33.2667 } }
+      { id: 'cankiri-buyuksehir', name: 'Çankırı Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 40.6013, longitude: 33.6134 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 40.6013, longitude: 33.6134 } },
+      { id: 'kursunlu', name: 'Kurşunlu', type: 'ilçe', coordinates: { latitude: 40.8333, longitude: 33.2667 } },
+      { id: 'orta', name: 'Orta', type: 'ilçe', coordinates: { latitude: 40.6167, longitude: 33.1167 } },
+      { id: 'sabanozu', name: 'Şabanözü', type: 'ilçe', coordinates: { latitude: 40.4833, longitude: 33.2833 } },
+      { id: 'cerkes', name: 'Çerkeş', type: 'ilçe', coordinates: { latitude: 40.8167, longitude: 32.9000 } },
+      { id: 'ilgaz', name: 'Ilgaz', type: 'ilçe', coordinates: { latitude: 40.9167, longitude: 33.6167 } },
+      { id: 'yaprakli', name: 'Yapraklı', type: 'ilçe', coordinates: { latitude: 40.7500, longitude: 34.0667 } },
+      { id: 'atkaracalar', name: 'Atkaracalar', type: 'ilçe', coordinates: { latitude: 40.8167, longitude: 33.0667 } },
+      { id: 'eldivan', name: 'Eldivan', type: 'ilçe', coordinates: { latitude: 40.5333, longitude: 33.5000 } },
+      { id: 'korgun', name: 'Korgun', type: 'ilçe', coordinates: { latitude: 40.7333, longitude: 33.5167 } },
+      { id: 'bayramoren', name: 'Bayramören', type: 'ilçe', coordinates: { latitude: 40.9500, longitude: 33.2000 } },
+      { id: 'kizilirmak', name: 'Kızılırmak', type: 'ilçe', coordinates: { latitude: 40.3500, longitude: 33.9833 } }
     ]
   },
   {
@@ -313,8 +384,20 @@ export const turkeyCities: City[] = [
     plateNumber: 19,
     coordinates: { latitude: 40.5499, longitude: 34.9537 },
     municipalities: [
-      { id: 'corum-merkez', name: 'Çorum Merkez', type: 'ilçe', coordinates: { latitude: 40.5499, longitude: 34.9537 } },
-      { id: 'sungurlu', name: 'Sungurlu', type: 'ilçe', coordinates: { latitude: 40.1667, longitude: 34.3667 } }
+      { id: 'corum-buyuksehir', name: 'Çorum Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 40.5499, longitude: 34.9537 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 40.5499, longitude: 34.9537 } },
+      { id: 'sungurlu', name: 'Sungurlu', type: 'ilçe', coordinates: { latitude: 40.1667, longitude: 34.3667 } },
+      { id: 'iskilip', name: 'İskilip', type: 'ilçe', coordinates: { latitude: 40.7333, longitude: 34.4667 } },
+      { id: 'alaca', name: 'Alaca', type: 'ilçe', coordinates: { latitude: 40.1667, longitude: 34.8333 } },
+      { id: 'ortakoy', name: 'Ortaköy', type: 'ilçe', coordinates: { latitude: 40.2667, longitude: 35.2500 } },
+      { id: 'mecitozu', name: 'Mecitözü', type: 'ilçe', coordinates: { latitude: 40.5167, longitude: 35.2833 } },
+      { id: 'osmancik', name: 'Osmancık', type: 'ilçe', coordinates: { latitude: 40.9667, longitude: 34.8000 } },
+      { id: 'kargi', name: 'Kargı', type: 'ilçe', coordinates: { latitude: 41.1333, longitude: 34.4833 } },
+      { id: 'ugurludag', name: 'Uğurludağ', type: 'ilçe', coordinates: { latitude: 40.4500, longitude: 34.4500 } },
+      { id: 'dodurga', name: 'Dodurga', type: 'ilçe', coordinates: { latitude: 40.8500, longitude: 34.8167 } },
+      { id: 'bogazkale', name: 'Boğazkale', type: 'ilçe', coordinates: { latitude: 40.0167, longitude: 34.6167 } },
+      { id: 'laçin', name: 'Laçin', type: 'ilçe', coordinates: { latitude: 40.7667, longitude: 34.8667 } },
+      { id: 'oguzlar', name: 'Oğuzlar', type: 'ilçe', coordinates: { latitude: 40.7500, longitude: 34.7000 } }
     ]
   },
   {
@@ -324,7 +407,23 @@ export const turkeyCities: City[] = [
     coordinates: { latitude: 37.7765, longitude: 29.0864 },
     municipalities: [
       { id: 'denizli-buyuksehir', name: 'Denizli Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 37.7765, longitude: 29.0864 } },
-      { id: 'pamukkale', name: 'Pamukkale', type: 'ilçe', coordinates: { latitude: 37.9167, longitude: 29.1167 } }
+      { id: 'pamukkale', name: 'Pamukkale', type: 'ilçe', coordinates: { latitude: 37.9167, longitude: 29.1167 } },
+      { id: 'merkezefendi', name: 'Merkezefendi', type: 'ilçe', coordinates: { latitude: 37.7833, longitude: 29.0833 } },
+      { id: 'tavas', name: 'Tavas', type: 'ilçe', coordinates: { latitude: 37.5667, longitude: 29.0667 } },
+      { id: 'acipayam', name: 'Acıpayam', type: 'ilçe', coordinates: { latitude: 37.4167, longitude: 29.3500 } },
+      { id: 'buldan', name: 'Buldan', type: 'ilçe', coordinates: { latitude: 38.5500, longitude: 28.8333 } },
+      { id: 'cal', name: 'Çal', type: 'ilçe', coordinates: { latitude: 38.0833, longitude: 29.4000 } },
+      { id: 'saraykoy', name: 'Sarayköy', type: 'ilçe', coordinates: { latitude: 37.9333, longitude: 28.9167 } },
+      { id: 'honaz', name: 'Honaz', type: 'ilçe', coordinates: { latitude: 37.9167, longitude: 29.2833 } },
+      { id: 'bozkurt', name: 'Bozkurt', type: 'ilçe', coordinates: { latitude: 37.8167, longitude: 29.6167 } },
+      { id: 'guneysinir', name: 'Güneysınır', type: 'ilçe', coordinates: { latitude: 37.2667, longitude: 30.9833 } },
+      { id: 'civril', name: 'Çivril', type: 'ilçe', coordinates: { latitude: 38.3000, longitude: 29.7333 } },
+      { id: 'kale', name: 'Kale', type: 'ilçe', coordinates: { latitude: 37.4333, longitude: 28.8333 } },
+      { id: 'serinhisar', name: 'Serinhisar', type: 'ilçe', coordinates: { latitude: 37.5833, longitude: 29.2667 } },
+      { id: 'babadag', name: 'Babadağ', type: 'ilçe', coordinates: { latitude: 37.8000, longitude: 28.8500 } },
+      { id: 'bekilli', name: 'Bekilli', type: 'ilçe', coordinates: { latitude: 38.2333, longitude: 29.4167 } },
+      { id: 'cardak', name: 'Çardak', type: 'ilçe', coordinates: { latitude: 37.8167, longitude: 29.7000 } },
+      { id: 'cameli', name: 'Çameli', type: 'ilçe', coordinates: { latitude: 37.0667, longitude: 29.3333 } }
     ]
   },
   {
@@ -335,7 +434,21 @@ export const turkeyCities: City[] = [
     municipalities: [
       { id: 'diyarbakir-buyuksehir', name: 'Diyarbakır Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 37.9144, longitude: 40.2306 } },
       { id: 'baglar', name: 'Bağlar', type: 'ilçe', coordinates: { latitude: 37.9167, longitude: 40.2167 } },
-      { id: 'kayapinar', name: 'Kayapınar', type: 'ilçe', coordinates: { latitude: 37.9333, longitude: 40.2000 } }
+      { id: 'kayapinar', name: 'Kayapınar', type: 'ilçe', coordinates: { latitude: 37.9333, longitude: 40.2000 } },
+      { id: 'sur', name: 'Sur', type: 'ilçe', coordinates: { latitude: 37.9167, longitude: 40.2333 } },
+      { id: 'yenisehir', name: 'Yenişehir', type: 'ilçe', coordinates: { latitude: 37.9167, longitude: 40.2167 } },
+      { id: 'ergani', name: 'Ergani', type: 'ilçe', coordinates: { latitude: 38.2667, longitude: 39.7667 } },
+      { id: 'bismil', name: 'Bismil', type: 'ilçe', coordinates: { latitude: 37.8500, longitude: 40.6667 } },
+      { id: 'silvan', name: 'Silvan', type: 'ilçe', coordinates: { latitude: 38.1333, longitude: 41.0000 } },
+      { id: 'cermik', name: 'Çermik', type: 'ilçe', coordinates: { latitude: 38.1333, longitude: 39.4500 } },
+      { id: 'dicle', name: 'Dicle', type: 'ilçe', coordinates: { latitude: 38.3667, longitude: 40.0667 } },
+      { id: 'kulp', name: 'Kulp', type: 'ilçe', coordinates: { latitude: 38.5000, longitude: 41.0000 } },
+      { id: 'hani', name: 'Hani', type: 'ilçe', coordinates: { latitude: 38.4167, longitude: 40.3833 } },
+      { id: 'lice', name: 'Lice', type: 'ilçe', coordinates: { latitude: 38.4667, longitude: 40.6500 } },
+      { id: 'egil', name: 'Eğil', type: 'ilçe', coordinates: { latitude: 38.2500, longitude: 40.0833 } },
+      { id: 'hazro', name: 'Hazro', type: 'ilçe', coordinates: { latitude: 38.2500, longitude: 40.7833 } },
+      { id: 'kocakoy', name: 'Kocaköy', type: 'ilçe', coordinates: { latitude: 38.2833, longitude: 40.5000 } },
+      { id: 'cungus', name: 'Çüngüş', type: 'ilçe', coordinates: { latitude: 38.2167, longitude: 39.2833 } }
     ]
   },
   {
@@ -344,8 +457,16 @@ export const turkeyCities: City[] = [
     plateNumber: 22,
     coordinates: { latitude: 41.6771, longitude: 26.5557 },
     municipalities: [
-      { id: 'edirne-merkez', name: 'Edirne Merkez', type: 'ilçe', coordinates: { latitude: 41.6771, longitude: 26.5557 } },
-      { id: 'keşan', name: 'Keşan', type: 'ilçe', coordinates: { latitude: 40.8500, longitude: 26.6333 } }
+      { id: 'edirne-buyuksehir', name: 'Edirne Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 41.6771, longitude: 26.5557 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 41.6771, longitude: 26.5557 } },
+      { id: 'kesan', name: 'Keşan', type: 'ilçe', coordinates: { latitude: 40.8500, longitude: 26.6333 } },
+      { id: 'uzunkopru', name: 'Uzunköprü', type: 'ilçe', coordinates: { latitude: 41.2667, longitude: 26.6833 } },
+      { id: 'ipsala', name: 'İpsala', type: 'ilçe', coordinates: { latitude: 40.9167, longitude: 26.3833 } },
+      { id: 'havsa', name: 'Havsa', type: 'ilçe', coordinates: { latitude: 41.5500, longitude: 26.8167 } },
+      { id: 'meric', name: 'Meriç', type: 'ilçe', coordinates: { latitude: 41.1833, longitude: 26.4167 } },
+      { id: 'suloglu', name: 'Süloğlu', type: 'ilçe', coordinates: { latitude: 41.7667, longitude: 26.9167 } },
+      { id: 'lalapasa', name: 'Lalapaşa', type: 'ilçe', coordinates: { latitude: 41.8333, longitude: 26.7333 } },
+      { id: 'enez', name: 'Enez', type: 'ilçe', coordinates: { latitude: 40.7167, longitude: 26.0833 } }
     ]
   },
   {
@@ -355,7 +476,17 @@ export const turkeyCities: City[] = [
     coordinates: { latitude: 38.6810, longitude: 39.2264 },
     municipalities: [
       { id: 'elazig-buyuksehir', name: 'Elazığ Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 38.6810, longitude: 39.2264 } },
-      { id: 'karakocan', name: 'Karakocan', type: 'ilçe', coordinates: { latitude: 39.1667, longitude: 40.0333 } }
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 38.6810, longitude: 39.2264 } },
+      { id: 'karakocan', name: 'Karakocan', type: 'ilçe', coordinates: { latitude: 39.1667, longitude: 40.0333 } },
+      { id: 'palu', name: 'Palu', type: 'ilçe', coordinates: { latitude: 38.7000, longitude: 39.9500 } },
+      { id: 'maden', name: 'Maden', type: 'ilçe', coordinates: { latitude: 38.3833, longitude: 39.1167 } },
+      { id: 'sivrice', name: 'Sivrice', type: 'ilçe', coordinates: { latitude: 38.4500, longitude: 39.3167 } },
+      { id: 'agın', name: 'Ağın', type: 'ilçe', coordinates: { latitude: 38.9333, longitude: 38.7167 } },
+      { id: 'keban', name: 'Keban', type: 'ilçe', coordinates: { latitude: 38.8000, longitude: 38.7333 } },
+      { id: 'baskil', name: 'Baskil', type: 'ilçe', coordinates: { latitude: 38.5667, longitude: 38.8167 } },
+      { id: 'alacakaya', name: 'Alacakaya', type: 'ilçe', coordinates: { latitude: 38.4500, longitude: 39.8500 } },
+      { id: 'aricak', name: 'Arıcak', type: 'ilçe', coordinates: { latitude: 38.5667, longitude: 40.1667 } },
+      { id: 'kovancilar', name: 'Kovancılar', type: 'ilçe', coordinates: { latitude: 38.7167, longitude: 39.8667 } }
     ]
   },
   {
@@ -364,8 +495,16 @@ export const turkeyCities: City[] = [
     plateNumber: 24,
     coordinates: { latitude: 39.7500, longitude: 39.5000 },
     municipalities: [
-      { id: 'erzincan-merkez', name: 'Erzincan Merkez', type: 'ilçe', coordinates: { latitude: 39.7500, longitude: 39.5000 } },
-      { id: 'tercan', name: 'Tercan', type: 'ilçe', coordinates: { latitude: 39.7833, longitude: 40.3833 } }
+      { id: 'erzincan-buyuksehir', name: 'Erzincan Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 39.7500, longitude: 39.5000 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 39.7500, longitude: 39.5000 } },
+      { id: 'tercan', name: 'Tercan', type: 'ilçe', coordinates: { latitude: 39.7833, longitude: 40.3833 } },
+      { id: 'uzumlu', name: 'Üzümlü', type: 'ilçe', coordinates: { latitude: 39.7000, longitude: 39.9833 } },
+      { id: 'kemah', name: 'Kemah', type: 'ilçe', coordinates: { latitude: 39.6000, longitude: 39.0333 } },
+      { id: 'kemaliye', name: 'Kemaliye', type: 'ilçe', coordinates: { latitude: 39.2667, longitude: 38.9833 } },
+      { id: 'ilic', name: 'İliç', type: 'ilçe', coordinates: { latitude: 39.4500, longitude: 38.5667 } },
+      { id: 'refahiye', name: 'Refahiye', type: 'ilçe', coordinates: { latitude: 39.9000, longitude: 38.7667 } },
+      { id: 'otlukbeli', name: 'Otlukbeli', type: 'ilçe', coordinates: { latitude: 39.9667, longitude: 40.0167 } },
+      { id: 'cayirli', name: 'Çayırlı', type: 'ilçe', coordinates: { latitude: 39.8000, longitude: 40.0333 } }
     ]
   },
   {
@@ -375,7 +514,26 @@ export const turkeyCities: City[] = [
     coordinates: { latitude: 39.9000, longitude: 41.2700 },
     municipalities: [
       { id: 'erzurum-buyuksehir', name: 'Erzurum Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 39.9000, longitude: 41.2700 } },
-      { id: 'palandoken', name: 'Palandöken', type: 'ilçe', coordinates: { latitude: 39.9167, longitude: 41.2667 } }
+      { id: 'palandoken', name: 'Palandöken', type: 'ilçe', coordinates: { latitude: 39.9167, longitude: 41.2667 } },
+      { id: 'yakutiye', name: 'Yakutiye', type: 'ilçe', coordinates: { latitude: 39.9000, longitude: 41.2700 } },
+      { id: 'aziziye', name: 'Aziziye', type: 'ilçe', coordinates: { latitude: 39.9500, longitude: 41.1000 } },
+      { id: 'horasan', name: 'Horasan', type: 'ilçe', coordinates: { latitude: 40.0333, longitude: 42.1667 } },
+      { id: 'karayazi', name: 'Karaçoban', type: 'ilçe', coordinates: { latitude: 39.3500, longitude: 42.1000 } },
+      { id: 'pasinler', name: 'Pasinler', type: 'ilçe', coordinates: { latitude: 39.9833, longitude: 41.6667 } },
+      { id: 'oltu', name: 'Oltu', type: 'ilçe', coordinates: { latitude: 40.5500, longitude: 41.9833 } },
+      { id: 'tortum', name: 'Tortum', type: 'ilçe', coordinates: { latitude: 40.2833, longitude: 41.5500 } },
+      { id: 'narman', name: 'Narman', type: 'ilçe', coordinates: { latitude: 40.3500, longitude: 41.8500 } },
+      { id: 'hinis', name: 'Hınıs', type: 'ilçe', coordinates: { latitude: 39.3667, longitude: 41.7000 } },
+      { id: 'cat', name: 'Çat', type: 'ilçe', coordinates: { latitude: 39.6167, longitude: 40.9833 } },
+      { id: 'karayazi', name: 'Karaçoban', type: 'ilçe', coordinates: { latitude: 39.3500, longitude: 42.1000 } },
+      { id: 'tekman', name: 'Tekman', type: 'ilçe', coordinates: { latitude: 39.6333, longitude: 41.5167 } },
+      { id: 'koprukoy', name: 'Köprüköy', type: 'ilçe', coordinates: { latitude: 39.9667, longitude: 41.8667 } },
+      { id: 'senkaya', name: 'Şenkaya', type: 'ilçe', coordinates: { latitude: 40.5667, longitude: 42.3500 } },
+      { id: 'olur', name: 'Olur', type: 'ilçe', coordinates: { latitude: 40.8167, longitude: 42.1333 } },
+      { id: 'ispir', name: 'İspir', type: 'ilçe', coordinates: { latitude: 40.4833, longitude: 40.9833 } },
+      { id: 'uzundere', name: 'Uzundere', type: 'ilçe', coordinates: { latitude: 40.5333, longitude: 41.5500 } },
+      { id: 'askale', name: 'Aşkale', type: 'ilçe', coordinates: { latitude: 39.9167, longitude: 40.6833 } },
+      { id: 'pazaryolu', name: 'Pazaryolu', type: 'ilçe', coordinates: { latitude: 40.4167, longitude: 40.7667 } }
     ]
   },
   {
@@ -385,7 +543,19 @@ export const turkeyCities: City[] = [
     coordinates: { latitude: 39.7767, longitude: 30.5206 },
     municipalities: [
       { id: 'eskisehir-buyuksehir', name: 'Eskişehir Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 39.7767, longitude: 30.5206 } },
-      { id: 'tepebasi', name: 'Tepebaşı', type: 'ilçe', coordinates: { latitude: 39.7833, longitude: 30.5167 } }
+      { id: 'tepebasi', name: 'Tepebaşı', type: 'ilçe', coordinates: { latitude: 39.7833, longitude: 30.5167 } },
+      { id: 'odunpazari', name: 'Odunpazarı', type: 'ilçe', coordinates: { latitude: 39.7667, longitude: 30.5167 } },
+      { id: 'sivrihisar', name: 'Sivrihisar', type: 'ilçe', coordinates: { latitude: 39.4500, longitude: 31.5333 } },
+      { id: 'cifteler', name: 'Çifteler', type: 'ilçe', coordinates: { latitude: 39.3833, longitude: 31.0333 } },
+      { id: 'mahmudiye', name: 'Mahmudiye', type: 'ilçe', coordinates: { latitude: 39.5000, longitude: 30.9833 } },
+      { id: 'saricakaya', name: 'Sarıcakaya', type: 'ilçe', coordinates: { latitude: 40.0333, longitude: 30.6167 } },
+      { id: 'alpu', name: 'Alpu', type: 'ilçe', coordinates: { latitude: 39.7667, longitude: 30.9667 } },
+      { id: 'beylikova', name: 'Beylikova', type: 'ilçe', coordinates: { latitude: 39.6833, longitude: 31.2000 } },
+      { id: 'inegol', name: 'İnönü', type: 'ilçe', coordinates: { latitude: 39.8167, longitude: 30.1500 } },
+      { id: 'günyüzü', name: 'Günyüzü', type: 'ilçe', coordinates: { latitude: 39.3833, longitude: 31.8000 } },
+      { id: 'han', name: 'Han', type: 'ilçe', coordinates: { latitude: 39.1667, longitude: 30.8500 } },
+      { id: 'mihalgazi', name: 'Mihalgazi', type: 'ilçe', coordinates: { latitude: 40.0167, longitude: 30.5667 } },
+      { id: 'mihaliccik', name: 'Mihalıççık', type: 'ilçe', coordinates: { latitude: 39.8667, longitude: 31.5000 } }
     ]
   },
   {
@@ -396,7 +566,15 @@ export const turkeyCities: City[] = [
     municipalities: [
       { id: 'gaziantep-buyuksehir', name: 'Gaziantep Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 37.0662, longitude: 37.3833 } },
       { id: 'sahinbey', name: 'Şahinbey', type: 'ilçe', coordinates: { latitude: 37.0667, longitude: 37.3833 } },
-      { id: 'sehitkamil', name: 'Şehitkamil', type: 'ilçe', coordinates: { latitude: 37.1000, longitude: 37.3167 } }
+      { id: 'sehitkamil', name: 'Şehitkamil', type: 'ilçe', coordinates: { latitude: 37.1000, longitude: 37.3167 } },
+      { id: 'nurdagi', name: 'Nurdağı', type: 'ilçe', coordinates: { latitude: 37.1667, longitude: 36.7333 } },
+      { id: 'kilis', name: 'Kilis', type: 'ilçe', coordinates: { latitude: 36.7167, longitude: 37.1167 } },
+      { id: 'oguzeli', name: 'Oğuzeli', type: 'ilçe', coordinates: { latitude: 36.9667, longitude: 37.5167 } },
+      { id: 'yavuzeli', name: 'Yavuzeli', type: 'ilçe', coordinates: { latitude: 37.3167, longitude: 37.5667 } },
+      { id: 'araban', name: 'Araban', type: 'ilçe', coordinates: { latitude: 37.4167, longitude: 37.6833 } },
+      { id: 'islahiye', name: 'İslahiye', type: 'ilçe', coordinates: { latitude: 37.0167, longitude: 36.6333 } },
+      { id: 'nizip', name: 'Nizip', type: 'ilçe', coordinates: { latitude: 37.0167, longitude: 37.8000 } },
+      { id: 'karkamis', name: 'Karkamış', type: 'ilçe', coordinates: { latitude: 36.8333, longitude: 37.9833 } }
     ]
   },
   {
@@ -405,8 +583,23 @@ export const turkeyCities: City[] = [
     plateNumber: 28,
     coordinates: { latitude: 40.9128, longitude: 38.3895 },
     municipalities: [
-      { id: 'giresun-merkez', name: 'Giresun Merkez', type: 'ilçe', coordinates: { latitude: 40.9128, longitude: 38.3895 } },
-      { id: 'bulancak', name: 'Bulancak', type: 'ilçe', coordinates: { latitude: 40.9333, longitude: 38.2333 } }
+      { id: 'giresun-buyuksehir', name: 'Giresun Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 40.9128, longitude: 38.3895 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 40.9128, longitude: 38.3895 } },
+      { id: 'bulancak', name: 'Bulancak', type: 'ilçe', coordinates: { latitude: 40.9333, longitude: 38.2333 } },
+      { id: 'gorele', name: 'Görele', type: 'ilçe', coordinates: { latitude: 41.0333, longitude: 39.0000 } },
+      { id: 'tirebolu', name: 'Tirebolu', type: 'ilçe', coordinates: { latitude: 41.0000, longitude: 38.8167 } },
+      { id: 'espiye', name: 'Espiye', type: 'ilçe', coordinates: { latitude: 40.9500, longitude: 38.7167 } },
+      { id: 'sebinkarahisar', name: 'Şebinkarahisar', type: 'ilçe', coordinates: { latitude: 40.2833, longitude: 38.4167 } },
+      { id: 'dereli', name: 'Dereli', type: 'ilçe', coordinates: { latitude: 40.7333, longitude: 38.4500 } },
+      { id: 'keşap', name: 'Keşap', type: 'ilçe', coordinates: { latitude: 40.9167, longitude: 38.5167 } },
+      { id: 'yalvaç', name: 'Yağlıdere', type: 'ilçe', coordinates: { latitude: 40.8667, longitude: 38.6333 } },
+      { id: 'piraziz', name: 'Piraziz', type: 'ilçe', coordinates: { latitude: 40.9500, longitude: 38.1167 } },
+      { id: 'eynesil', name: 'Eynesil', type: 'ilçe', coordinates: { latitude: 41.0500, longitude: 39.1333 } },
+      { id: 'alucra', name: 'Alucra', type: 'ilçe', coordinates: { latitude: 40.3167, longitude: 38.7667 } },
+      { id: 'susehri', name: 'Suşehri', type: 'ilçe', coordinates: { latitude: 40.1667, longitude: 38.0833 } },
+      { id: 'canakci', name: 'Çanakçı', type: 'ilçe', coordinates: { latitude: 41.0167, longitude: 39.2333 } },
+      { id: 'dogankent', name: 'Doğankent', type: 'ilçe', coordinates: { latitude: 40.8167, longitude: 38.9167 } },
+      { id: 'güce', name: 'Güce', type: 'ilçe', coordinates: { latitude: 40.8833, longitude: 39.1000 } }
     ]
   },
   {
@@ -415,8 +608,13 @@ export const turkeyCities: City[] = [
     plateNumber: 29,
     coordinates: { latitude: 40.4603, longitude: 39.6884 },
     municipalities: [
-      { id: 'gumushane-merkez', name: 'Gümüşhane Merkez', type: 'ilçe', coordinates: { latitude: 40.4603, longitude: 39.6884 } },
-      { id: 'kelkit', name: 'Kelkit', type: 'ilçe', coordinates: { latitude: 40.1333, longitude: 39.4333 } }
+      { id: 'gumushane-buyuksehir', name: 'Gümüşhane Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 40.4603, longitude: 39.6884 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 40.4603, longitude: 39.6884 } },
+      { id: 'kelkit', name: 'Kelkit', type: 'ilçe', coordinates: { latitude: 40.1333, longitude: 39.4333 } },
+      { id: 'siran', name: 'Şiran', type: 'ilçe', coordinates: { latitude: 40.1833, longitude: 39.1167 } },
+      { id: 'torul', name: 'Torul', type: 'ilçe', coordinates: { latitude: 40.5500, longitude: 39.2833 } },
+      { id: 'kose', name: 'Köse', type: 'ilçe', coordinates: { latitude: 40.2167, longitude: 39.6500 } },
+      { id: 'kurtun', name: 'Kürtün', type: 'ilçe', coordinates: { latitude: 40.6833, longitude: 39.1000 } }
     ]
   },
   {
@@ -425,8 +623,12 @@ export const turkeyCities: City[] = [
     plateNumber: 30,
     coordinates: { latitude: 37.5833, longitude: 43.7333 },
     municipalities: [
-      { id: 'hakkari-merkez', name: 'Hakkari Merkez', type: 'ilçe', coordinates: { latitude: 37.5833, longitude: 43.7333 } },
-      { id: 'yuksekova', name: 'Yüksekova', type: 'ilçe', coordinates: { latitude: 37.5667, longitude: 44.2833 } }
+      { id: 'hakkari-buyuksehir', name: 'Hakkari Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 37.5833, longitude: 43.7333 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 37.5833, longitude: 43.7333 } },
+      { id: 'yuksekova', name: 'Yüksekova', type: 'ilçe', coordinates: { latitude: 37.5667, longitude: 44.2833 } },
+      { id: 'cukurca', name: 'Çukurca', type: 'ilçe', coordinates: { latitude: 37.2500, longitude: 43.6167 } },
+      { id: 'semdinli', name: 'Şemdinli', type: 'ilçe', coordinates: { latitude: 37.3167, longitude: 44.5667 } },
+      { id: 'derecik', name: 'Derecik', type: 'ilçe', coordinates: { latitude: 37.3667, longitude: 44.1667 } }
     ]
   },
   {
@@ -437,7 +639,20 @@ export const turkeyCities: City[] = [
     municipalities: [
       { id: 'hatay-buyuksehir', name: 'Hatay Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 36.2023, longitude: 36.1613 } },
       { id: 'antakya', name: 'Antakya', type: 'ilçe', coordinates: { latitude: 36.2023, longitude: 36.1613 } },
-      { id: 'iskenderun', name: 'İskenderun', type: 'ilçe', coordinates: { latitude: 36.5872, longitude: 36.1733 } }
+      { id: 'iskenderun', name: 'İskenderun', type: 'ilçe', coordinates: { latitude: 36.5872, longitude: 36.1733 } },
+      { id: 'defne', name: 'Defne', type: 'ilçe', coordinates: { latitude: 36.1833, longitude: 36.1500 } },
+      { id: 'arsuz', name: 'Arsuz', type: 'ilçe', coordinates: { latitude: 36.4167, longitude: 35.8833 } },
+      { id: 'samandag', name: 'Samandağ', type: 'ilçe', coordinates: { latitude: 36.0833, longitude: 35.9833 } },
+      { id: 'altinozu', name: 'Altınözü', type: 'ilçe', coordinates: { latitude: 36.1167, longitude: 36.2333 } },
+      { id: 'yayladagi', name: 'Yayladağı', type: 'ilçe', coordinates: { latitude: 35.9000, longitude: 36.0667 } },
+      { id: 'belen', name: 'Belen', type: 'ilçe', coordinates: { latitude: 36.4833, longitude: 36.1000 } },
+      { id: 'kumlu', name: 'Kumlu', type: 'ilçe', coordinates: { latitude: 36.3667, longitude: 36.4500 } },
+      { id: 'reyhanli', name: 'Reyhanlı', type: 'ilçe', coordinates: { latitude: 36.2667, longitude: 36.5667 } },
+      { id: 'kirikhan', name: 'Kırıkhan', type: 'ilçe', coordinates: { latitude: 36.5000, longitude: 36.3500 } },
+      { id: 'hassa', name: 'Hassa', type: 'ilçe', coordinates: { latitude: 36.8000, longitude: 36.5167 } },
+      { id: 'payas', name: 'Payas', type: 'ilçe', coordinates: { latitude: 36.7500, longitude: 36.2167 } },
+      { id: 'dortyol', name: 'Dörtyol', type: 'ilçe', coordinates: { latitude: 36.8500, longitude: 36.2167 } },
+      { id: 'erzin', name: 'Erzin', type: 'ilçe', coordinates: { latitude: 36.9500, longitude: 36.2000 } }
     ]
   },
   {
@@ -446,8 +661,20 @@ export const turkeyCities: City[] = [
     plateNumber: 32,
     coordinates: { latitude: 37.7648, longitude: 30.5566 },
     municipalities: [
-      { id: 'isparta-merkez', name: 'Isparta Merkez', type: 'ilçe', coordinates: { latitude: 37.7648, longitude: 30.5566 } },
-      { id: 'sarkikaraagac', name: 'Şarkikaraağaç', type: 'ilçe', coordinates: { latitude: 38.0833, longitude: 31.3667 } }
+      { id: 'isparta-buyuksehir', name: 'Isparta Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 37.7648, longitude: 30.5566 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 37.7648, longitude: 30.5566 } },
+      { id: 'sarkikaraagac', name: 'Şarkikaraağaç', type: 'ilçe', coordinates: { latitude: 38.0833, longitude: 31.3667 } },
+      { id: 'yalvac', name: 'Yalvaç', type: 'ilçe', coordinates: { latitude: 38.3000, longitude: 31.1833 } },
+      { id: 'egirdir', name: 'Eğirdir', type: 'ilçe', coordinates: { latitude: 37.8667, longitude: 30.8500 } },
+      { id: 'senirkent', name: 'Senirkent', type: 'ilçe', coordinates: { latitude: 38.1000, longitude: 30.5500 } },
+      { id: 'sutculer', name: 'Sütçüler', type: 'ilçe', coordinates: { latitude: 37.5000, longitude: 30.9833 } },
+      { id: 'gelendost', name: 'Gelendost', type: 'ilçe', coordinates: { latitude: 38.1167, longitude: 31.0167 } },
+      { id: 'keçiborlu', name: 'Keçiborlu', type: 'ilçe', coordinates: { latitude: 37.9500, longitude: 30.3000 } },
+      { id: 'atabey', name: 'Atabey', type: 'ilçe', coordinates: { latitude: 37.9500, longitude: 30.6333 } },
+      { id: 'gönen', name: 'Gönen', type: 'ilçe', coordinates: { latitude: 37.9500, longitude: 30.5000 } },
+      { id: 'uluborlu', name: 'Uluborlu', type: 'ilçe', coordinates: { latitude: 38.0833, longitude: 30.4500 } },
+      { id: 'aksu', name: 'Aksu', type: 'ilçe', coordinates: { latitude: 37.8000, longitude: 30.5333 } },
+      { id: 'yenişarbademli', name: 'Yenişarbademli', type: 'ilçe', coordinates: { latitude: 37.7000, longitude: 31.3833 } }
     ]
   },
   {
@@ -458,7 +685,18 @@ export const turkeyCities: City[] = [
     municipalities: [
       { id: 'mersin-buyuksehir', name: 'Mersin Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 36.8121, longitude: 34.6415 } },
       { id: 'akdeniz', name: 'Akdeniz', type: 'ilçe', coordinates: { latitude: 36.8167, longitude: 34.6333 } },
-      { id: 'toroslar', name: 'Toroslar', type: 'ilçe', coordinates: { latitude: 36.8000, longitude: 34.6500 } }
+      { id: 'toroslar', name: 'Toroslar', type: 'ilçe', coordinates: { latitude: 36.8000, longitude: 34.6500 } },
+      { id: 'yenisehir', name: 'Yenişehir', type: 'ilçe', coordinates: { latitude: 36.8167, longitude: 34.6333 } },
+      { id: 'mezitli', name: 'Mezitli', type: 'ilçe', coordinates: { latitude: 36.7500, longitude: 34.5333 } },
+      { id: 'tarsus', name: 'Tarsus', type: 'ilçe', coordinates: { latitude: 36.9167, longitude: 34.9000 } },
+      { id: 'silifke', name: 'Silifke', type: 'ilçe', coordinates: { latitude: 36.3667, longitude: 33.9333 } },
+      { id: 'anamur', name: 'Anamur', type: 'ilçe', coordinates: { latitude: 36.0833, longitude: 32.8333 } },
+      { id: 'mut', name: 'Mut', type: 'ilçe', coordinates: { latitude: 36.6500, longitude: 33.4333 } },
+      { id: 'gulnar', name: 'Gülnar', type: 'ilçe', coordinates: { latitude: 36.3333, longitude: 33.4000 } },
+      { id: 'bozyazi', name: 'Bozyazı', type: 'ilçe', coordinates: { latitude: 36.1000, longitude: 32.9667 } },
+      { id: 'erdemli', name: 'Erdemli', type: 'ilçe', coordinates: { latitude: 36.6000, longitude: 34.3000 } },
+      { id: 'aydincik', name: 'Aydıncık', type: 'ilçe', coordinates: { latitude: 36.1500, longitude: 33.3167 } },
+      { id: 'camliyayla', name: 'Çamlıyayla', type: 'ilçe', coordinates: { latitude: 37.1667, longitude: 34.6000 } }
     ]
   },
   {
@@ -470,7 +708,50 @@ export const turkeyCities: City[] = [
       { id: 'istanbul-buyuksehir', name: 'İstanbul Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 41.0082, longitude: 28.9784 } },
       { id: 'kadikoy', name: 'Kadıköy', type: 'ilçe', coordinates: { latitude: 40.9900, longitude: 29.0300 } },
       { id: 'besiktas', name: 'Beşiktaş', type: 'ilçe', coordinates: { latitude: 41.0422, longitude: 29.0083 } },
-      { id: 'sisli', name: 'Şişli', type: 'ilçe', coordinates: { latitude: 41.0600, longitude: 28.9877 } }
+      { id: 'sisli', name: 'Şişli', type: 'ilçe', coordinates: { latitude: 41.0600, longitude: 28.9877 } },
+      { id: 'fatih', name: 'Fatih', type: 'ilçe', coordinates: { latitude: 41.0082, longitude: 28.9784 } },
+      { id: 'uskudar', name: 'Üsküdar', type: 'ilçe', coordinates: { latitude: 41.0167, longitude: 29.0167 } },
+      { id: 'eyupsultan', name: 'Eyüpsultan', type: 'ilçe', coordinates: { latitude: 41.0500, longitude: 28.9333 } },
+      { id: 'sariyer', name: 'Sarıyer', type: 'ilçe', coordinates: { latitude: 41.1667, longitude: 29.0500 } },
+      { id: 'beyoglu', name: 'Beyoğlu', type: 'ilçe', coordinates: { latitude: 41.0333, longitude: 28.9833 } },
+      { id: 'beykoz', name: 'Beykoz', type: 'ilçe', coordinates: { latitude: 41.1333, longitude: 29.1000 } },
+      { id: 'sultanbeyli', name: 'Sultanbeyli', type: 'ilçe', coordinates: { latitude: 40.9500, longitude: 29.2667 } },
+      { id: 'pendik', name: 'Pendik', type: 'ilçe', coordinates: { latitude: 40.8833, longitude: 29.2333 } },
+      { id: 'kartal', name: 'Kartal', type: 'ilçe', coordinates: { latitude: 40.9000, longitude: 29.1833 } },
+      { id: 'maltepe', name: 'Maltepe', type: 'ilçe', coordinates: { latitude: 40.9333, longitude: 29.1333 } },
+      { id: 'atasehir', name: 'Ataşehir', type: 'ilçe', coordinates: { latitude: 40.9833, longitude: 29.1167 } },
+      { id: 'umraniye', name: 'Ümraniye', type: 'ilçe', coordinates: { latitude: 41.0167, longitude: 29.1167 } },
+      { id: 'cekmekoy', name: 'Çekmeköy', type: 'ilçe', coordinates: { latitude: 41.0333, longitude: 29.1833 } },
+      { id: 'sancaktepe', name: 'Sancaktepe', type: 'ilçe', coordinates: { latitude: 41.0000, longitude: 29.2333 } },
+      { id: 'tuzla', name: 'Tuzla', type: 'ilçe', coordinates: { latitude: 40.8167, longitude: 29.3000 } },
+      { id: 'gebze', name: 'Gebze', type: 'ilçe', coordinates: { latitude: 40.8000, longitude: 29.4333 } },
+      { id: 'darica', name: 'Darıca', type: 'ilçe', coordinates: { latitude: 40.7667, longitude: 29.3833 } },
+      { id: 'kocaeli', name: 'Körfez', type: 'ilçe', coordinates: { latitude: 40.7667, longitude: 29.7333 } },
+      { id: 'dilovasi', name: 'Dilovası', type: 'ilçe', coordinates: { latitude: 40.7833, longitude: 29.5333 } },
+      { id: 'cayirova', name: 'Çayırova', type: 'ilçe', coordinates: { latitude: 40.8167, longitude: 29.3833 } },
+      { id: 'basaksehir', name: 'Başakşehir', type: 'ilçe', coordinates: { latitude: 41.1000, longitude: 28.8000 } },
+      { id: 'bagcilar', name: 'Bağcılar', type: 'ilçe', coordinates: { latitude: 41.0333, longitude: 28.8500 } },
+      { id: 'bahcelievler', name: 'Bahçelievler', type: 'ilçe', coordinates: { latitude: 40.9833, longitude: 28.8667 } },
+      { id: 'bakirkoy', name: 'Bakırköy', type: 'ilçe', coordinates: { latitude: 40.9833, longitude: 28.8833 } },
+      { id: 'bayrampasa', name: 'Bayrampaşa', type: 'ilçe', coordinates: { latitude: 41.0333, longitude: 28.9167 } },
+      { id: 'esenyurt', name: 'Esenyurt', type: 'ilçe', coordinates: { latitude: 41.0167, longitude: 28.6667 } },
+      { id: 'avcilar', name: 'Avcılar', type: 'ilçe', coordinates: { latitude: 40.9833, longitude: 28.7167 } },
+      { id: 'kucukcekmece', name: 'Küçükçekmece', type: 'ilçe', coordinates: { latitude: 41.0000, longitude: 28.8000 } },
+      { id: 'esenyurt', name: 'Büyükçekmece', type: 'ilçe', coordinates: { latitude: 41.0167, longitude: 28.6167 } },
+      { id: 'silivri', name: 'Silivri', type: 'ilçe', coordinates: { latitude: 41.0667, longitude: 28.2333 } },
+      { id: 'catalca', name: 'Çatalca', type: 'ilçe', coordinates: { latitude: 41.1500, longitude: 28.4667 } },
+      { id: 'ar navutkoy', name: 'Arnavutköy', type: 'ilçe', coordinates: { latitude: 41.1833, longitude: 28.7333 } },
+      { id: 'eyupsultan', name: 'Sultangazi', type: 'ilçe', coordinates: { latitude: 41.1000, longitude: 28.8667 } },
+      { id: 'gaziosmanpasa', name: 'Gaziosmanpaşa', type: 'ilçe', coordinates: { latitude: 41.0667, longitude: 28.9167 } },
+      { id: 'kagithane', name: 'Kağıthane', type: 'ilçe', coordinates: { latitude: 41.0833, longitude: 28.9667 } },
+      { id: 'sultangazi', name: 'Sultangazi', type: 'ilçe', coordinates: { latitude: 41.1000, longitude: 28.8667 } },
+      { id: 'esenler', name: 'Esenler', type: 'ilçe', coordinates: { latitude: 41.0333, longitude: 28.8833 } },
+      { id: 'guney', name: 'Güneşli', type: 'ilçe', coordinates: { latitude: 41.0167, longitude: 28.8500 } },
+      { id: 'zeytinburnu', name: 'Zeytinburnu', type: 'ilçe', coordinates: { latitude: 40.9833, longitude: 28.9000 } },
+      { id: 'sultanahmet', name: 'Sultanahmet', type: 'ilçe', coordinates: { latitude: 41.0082, longitude: 28.9784 } },
+      { id: 'beylikduzu', name: 'Beylikdüzü', type: 'ilçe', coordinates: { latitude: 40.9833, longitude: 28.6333 } },
+      { id: 'sile', name: 'Şile', type: 'ilçe', coordinates: { latitude: 41.1833, longitude: 29.6167 } },
+      { id: 'sariyer', name: 'Çatalca', type: 'ilçe', coordinates: { latitude: 41.1500, longitude: 28.4667 } }
     ]
   },
   {
@@ -481,7 +762,33 @@ export const turkeyCities: City[] = [
     municipalities: [
       { id: 'izmir-buyuksehir', name: 'İzmir Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 38.4192, longitude: 27.1287 } },
       { id: 'konak', name: 'Konak', type: 'ilçe', coordinates: { latitude: 38.4192, longitude: 27.1287 } },
-      { id: 'bornova', name: 'Bornova', type: 'ilçe', coordinates: { latitude: 38.4667, longitude: 27.2167 } }
+      { id: 'bornova', name: 'Bornova', type: 'ilçe', coordinates: { latitude: 38.4667, longitude: 27.2167 } },
+      { id: 'karsiyaka', name: 'Karşıyaka', type: 'ilçe', coordinates: { latitude: 38.4667, longitude: 27.1167 } },
+      { id: 'bayrakli', name: 'Bayraklı', type: 'ilçe', coordinates: { latitude: 38.4667, longitude: 27.1667 } },
+      { id: 'buca', name: 'Buca', type: 'ilçe', coordinates: { latitude: 38.3833, longitude: 27.1667 } },
+      { id: 'cigli', name: 'Çiğli', type: 'ilçe', coordinates: { latitude: 38.5000, longitude: 27.0667 } },
+      { id: 'gaziemir', name: 'Gaziemir', type: 'ilçe', coordinates: { latitude: 38.3667, longitude: 27.1167 } },
+      { id: 'karabaglar', name: 'Karabağlar', type: 'ilçe', coordinates: { latitude: 38.3833, longitude: 27.1167 } },
+      { id: 'odemis', name: 'Ödemiş', type: 'ilçe', coordinates: { latitude: 38.2333, longitude: 27.9667 } },
+      { id: 'tire', name: 'Tire', type: 'ilçe', coordinates: { latitude: 38.0833, longitude: 27.7333 } },
+      { id: 'bergama', name: 'Bergama', type: 'ilçe', coordinates: { latitude: 39.1167, longitude: 27.1833 } },
+      { id: 'menemen', name: 'Menemen', type: 'ilçe', coordinates: { latitude: 38.6000, longitude: 27.0667 } },
+      { id: 'urla', name: 'Urla', type: 'ilçe', coordinates: { latitude: 38.3167, longitude: 26.7667 } },
+      { id: 'cesme', name: 'Çeşme', type: 'ilçe', coordinates: { latitude: 38.3167, longitude: 26.3000 } },
+      { id: 'karaburun', name: 'Karaburun', type: 'ilçe', coordinates: { latitude: 38.6333, longitude: 26.5167 } },
+      { id: 'foça', name: 'Foça', type: 'ilçe', coordinates: { latitude: 38.6667, longitude: 26.7500 } },
+      { id: 'dikili', name: 'Dikili', type: 'ilçe', coordinates: { latitude: 39.0667, longitude: 26.8833 } },
+      { id: 'aliaga', name: 'Aliağa', type: 'ilçe', coordinates: { latitude: 38.8000, longitude: 26.9667 } },
+      { id: 'kemalpasa', name: 'Kemalpaşa', type: 'ilçe', coordinates: { latitude: 38.4167, longitude: 27.4167 } },
+      { id: 'bayindir', name: 'Bayındır', type: 'ilçe', coordinates: { latitude: 38.2167, longitude: 27.6500 } },
+      { id: 'torbalı', name: 'Torbalı', type: 'ilçe', coordinates: { latitude: 38.1667, longitude: 27.3500 } },
+      { id: 'menderes', name: 'Menderes', type: 'ilçe', coordinates: { latitude: 38.2500, longitude: 27.1333 } },
+      { id: 'seferihisar', name: 'Seferihisar', type: 'ilçe', coordinates: { latitude: 38.2000, longitude: 26.8333 } },
+      { id: 'selcuk', name: 'Selçuk', type: 'ilçe', coordinates: { latitude: 37.9500, longitude: 27.3667 } },
+      { id: 'kinik', name: 'Kınık', type: 'ilçe', coordinates: { latitude: 39.0833, longitude: 27.6833 } },
+      { id: 'kiraz', name: 'Kiraz', type: 'ilçe', coordinates: { latitude: 38.2333, longitude: 28.2000 } },
+      { id: 'beydag', name: 'Beydağ', type: 'ilçe', coordinates: { latitude: 38.0833, longitude: 28.2167 } },
+      { id: 'odemis', name: 'Ödemiş', type: 'ilçe', coordinates: { latitude: 38.2333, longitude: 27.9667 } }
     ]
   },
   {
@@ -490,8 +797,15 @@ export const turkeyCities: City[] = [
     plateNumber: 36,
     coordinates: { latitude: 40.6167, longitude: 43.1000 },
     municipalities: [
-      { id: 'kars-merkez', name: 'Kars Merkez', type: 'ilçe', coordinates: { latitude: 40.6167, longitude: 43.1000 } },
-      { id: 'sarikamis', name: 'Sarıkamış', type: 'ilçe', coordinates: { latitude: 40.3333, longitude: 42.5833 } }
+      { id: 'kars-buyuksehir', name: 'Kars Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 40.6167, longitude: 43.1000 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 40.6167, longitude: 43.1000 } },
+      { id: 'sarikamis', name: 'Sarıkamış', type: 'ilçe', coordinates: { latitude: 40.3333, longitude: 42.5833 } },
+      { id: 'kagizman', name: 'Kağızman', type: 'ilçe', coordinates: { latitude: 40.1500, longitude: 43.1333 } },
+      { id: 'digor', name: 'Digor', type: 'ilçe', coordinates: { latitude: 40.3667, longitude: 43.4167 } },
+      { id: 'selim', name: 'Selim', type: 'ilçe', coordinates: { latitude: 40.4667, longitude: 42.7833 } },
+      { id: 'arpaçay', name: 'Arpaçay', type: 'ilçe', coordinates: { latitude: 40.8500, longitude: 43.3333 } },
+      { id: 'aksu', name: 'Akyaka', type: 'ilçe', coordinates: { latitude: 40.7333, longitude: 43.6167 } },
+      { id: 'susuz', name: 'Susuz', type: 'ilçe', coordinates: { latitude: 40.7833, longitude: 43.1333 } }
     ]
   },
   {
@@ -500,8 +814,26 @@ export const turkeyCities: City[] = [
     plateNumber: 37,
     coordinates: { latitude: 41.3887, longitude: 33.7827 },
     municipalities: [
-      { id: 'kastamonu-merkez', name: 'Kastamonu Merkez', type: 'ilçe', coordinates: { latitude: 41.3887, longitude: 33.7827 } },
-      { id: 'tosya', name: 'Tosya', type: 'ilçe', coordinates: { latitude: 41.0167, longitude: 34.0333 } }
+      { id: 'kastamonu-buyuksehir', name: 'Kastamonu Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 41.3887, longitude: 33.7827 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 41.3887, longitude: 33.7827 } },
+      { id: 'tosya', name: 'Tosya', type: 'ilçe', coordinates: { latitude: 41.0167, longitude: 34.0333 } },
+      { id: 'taskopru', name: 'Taşköprü', type: 'ilçe', coordinates: { latitude: 41.5167, longitude: 34.2167 } },
+      { id: 'inebolu', name: 'İnebolu', type: 'ilçe', coordinates: { latitude: 41.9667, longitude: 33.7667 } },
+      { id: 'boyabat', name: 'Boyabat', type: 'ilçe', coordinates: { latitude: 41.4667, longitude: 34.7667 } },
+      { id: 'araç', name: 'Araç', type: 'ilçe', coordinates: { latitude: 41.2500, longitude: 33.3333 } },
+      { id: 'azdavay', name: 'Azdavay', type: 'ilçe', coordinates: { latitude: 41.6333, longitude: 33.3000 } },
+      { id: 'cide', name: 'Cide', type: 'ilçe', coordinates: { latitude: 41.8833, longitude: 33.0000 } },
+      { id: 'devrekani', name: 'Devrekani', type: 'ilçe', coordinates: { latitude: 41.6000, longitude: 33.8333 } },
+      { id: 'kure', name: 'Küre', type: 'ilçe', coordinates: { latitude: 41.8000, longitude: 33.7167 } },
+      { id: 'pinarbasi', name: 'Pınarbaşı', type: 'ilçe', coordinates: { latitude: 41.6000, longitude: 33.1167 } },
+      { id: 'seydiler', name: 'Seydiler', type: 'ilçe', coordinates: { latitude: 41.6167, longitude: 33.7167 } },
+      { id: 'senpazar', name: 'Şenpazar', type: 'ilçe', coordinates: { latitude: 41.8167, longitude: 33.2167 } },
+      { id: 'doganyurt', name: 'Doğanyurt', type: 'ilçe', coordinates: { latitude: 42.0000, longitude: 33.4667 } },
+      { id: 'ihsangazi', name: 'İhsangazi', type: 'ilçe', coordinates: { latitude: 41.6333, longitude: 33.5500 } },
+      { id: 'abana', name: 'Abana', type: 'ilçe', coordinates: { latitude: 41.9833, longitude: 34.0167 } },
+      { id: 'bozkurt', name: 'Bozkurt', type: 'ilçe', coordinates: { latitude: 41.9667, longitude: 34.0167 } },
+      { id: 'catalzeytin', name: 'Çatalzeytin', type: 'ilçe', coordinates: { latitude: 41.9500, longitude: 34.2167 } },
+      { id: 'hanonu', name: 'Hanonu', type: 'ilçe', coordinates: { latitude: 41.6333, longitude: 34.4667 } }
     ]
   },
   {
@@ -512,7 +844,21 @@ export const turkeyCities: City[] = [
     municipalities: [
       { id: 'kayseri-buyuksehir', name: 'Kayseri Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 38.7205, longitude: 35.4826 } },
       { id: 'melikgazi', name: 'Melikgazi', type: 'ilçe', coordinates: { latitude: 38.7205, longitude: 35.4826 } },
-      { id: 'kocasinan', name: 'Kocasinan', type: 'ilçe', coordinates: { latitude: 38.7333, longitude: 35.4833 } }
+      { id: 'kocasinan', name: 'Kocasinan', type: 'ilçe', coordinates: { latitude: 38.7333, longitude: 35.4833 } },
+      { id: 'talas', name: 'Talas', type: 'ilçe', coordinates: { latitude: 38.6833, longitude: 35.5667 } },
+      { id: 'develi', name: 'Develi', type: 'ilçe', coordinates: { latitude: 38.3833, longitude: 35.4833 } },
+      { id: 'yahyali', name: 'Yahyalı', type: 'ilçe', coordinates: { latitude: 37.9500, longitude: 35.3500 } },
+      { id: 'bunyan', name: 'Bünyan', type: 'ilçe', coordinates: { latitude: 38.8500, longitude: 35.8500 } },
+      { id: 'incesu', name: 'İncesu', type: 'ilçe', coordinates: { latitude: 38.6167, longitude: 35.1833 } },
+      { id: 'sarioglan', name: 'Sarıoğlan', type: 'ilçe', coordinates: { latitude: 39.0833, longitude: 35.9667 } },
+      { id: 'yesilhisar', name: 'Yeşilhisar', type: 'ilçe', coordinates: { latitude: 38.3500, longitude: 35.0833 } },
+      { id: 'hacilar', name: 'Hacılar', type: 'ilçe', coordinates: { latitude: 38.6500, longitude: 35.4500 } },
+      { id: 'sarkisla', name: 'Şarkışla', type: 'ilçe', coordinates: { latitude: 39.3500, longitude: 36.4000 } },
+      { id: 'akiskaray', name: 'Akkışla', type: 'ilçe', coordinates: { latitude: 39.0000, longitude: 36.1667 } },
+      { id: 'felahiye', name: 'Felahiye', type: 'ilçe', coordinates: { latitude: 39.0833, longitude: 35.5667 } },
+      { id: 'ozvatan', name: 'Özvatan', type: 'ilçe', coordinates: { latitude: 39.1167, longitude: 35.7167 } },
+      { id: 'pinarozu', name: 'Pınarbaşı', type: 'ilçe', coordinates: { latitude: 38.7167, longitude: 36.3833 } },
+      { id: 'tomarza', name: 'Tomarza', type: 'ilçe', coordinates: { latitude: 38.4500, longitude: 35.8000 } }
     ]
   },
   {
@@ -521,8 +867,15 @@ export const turkeyCities: City[] = [
     plateNumber: 39,
     coordinates: { latitude: 41.7333, longitude: 27.2167 },
     municipalities: [
-      { id: 'kirklareli-merkez', name: 'Kırklareli Merkez', type: 'ilçe', coordinates: { latitude: 41.7333, longitude: 27.2167 } },
-      { id: 'luleburgaz', name: 'Lüleburgaz', type: 'ilçe', coordinates: { latitude: 41.4000, longitude: 27.3500 } }
+      { id: 'kirklareli-buyuksehir', name: 'Kırklareli Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 41.7333, longitude: 27.2167 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 41.7333, longitude: 27.2167 } },
+      { id: 'luleburgaz', name: 'Lüleburgaz', type: 'ilçe', coordinates: { latitude: 41.4000, longitude: 27.3500 } },
+      { id: 'babaeski', name: 'Babaeski', type: 'ilçe', coordinates: { latitude: 41.4333, longitude: 26.9833 } },
+      { id: 'vize', name: 'Vize', type: 'ilçe', coordinates: { latitude: 41.5667, longitude: 27.7667 } },
+      { id: 'pinarhisar', name: 'Pınarhisar', type: 'ilçe', coordinates: { latitude: 41.6167, longitude: 27.5167 } },
+      { id: 'demirkoy', name: 'Demirköy', type: 'ilçe', coordinates: { latitude: 41.8167, longitude: 27.7667 } },
+      { id: 'kofcaz', name: 'Kofçaz', type: 'ilçe', coordinates: { latitude: 41.9500, longitude: 27.1667 } },
+      { id: 'pehlivankoy', name: 'Pehlivanköy', type: 'ilçe', coordinates: { latitude: 41.3500, longitude: 26.9167 } }
     ]
   },
   {
@@ -531,8 +884,13 @@ export const turkeyCities: City[] = [
     plateNumber: 40,
     coordinates: { latitude: 39.1425, longitude: 34.1709 },
     municipalities: [
-      { id: 'kirsehir-merkez', name: 'Kırşehir Merkez', type: 'ilçe', coordinates: { latitude: 39.1425, longitude: 34.1709 } },
-      { id: 'kaman', name: 'Kaman', type: 'ilçe', coordinates: { latitude: 39.3500, longitude: 33.7167 } }
+      { id: 'kirsehir-buyuksehir', name: 'Kırşehir Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 39.1425, longitude: 34.1709 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 39.1425, longitude: 34.1709 } },
+      { id: 'kaman', name: 'Kaman', type: 'ilçe', coordinates: { latitude: 39.3500, longitude: 33.7167 } },
+      { id: 'mucur', name: 'Mucur', type: 'ilçe', coordinates: { latitude: 39.0667, longitude: 34.3833 } },
+      { id: 'cicekdagi', name: 'Çiçekdağı', type: 'ilçe', coordinates: { latitude: 39.6000, longitude: 34.4000 } },
+      { id: 'akpinar', name: 'Akpınar', type: 'ilçe', coordinates: { latitude: 39.4500, longitude: 33.9667 } },
+      { id: 'boztepe', name: 'Boztepe', type: 'ilçe', coordinates: { latitude: 39.2667, longitude: 34.2667 } }
     ]
   },
   {
@@ -543,7 +901,16 @@ export const turkeyCities: City[] = [
     municipalities: [
       { id: 'kocaeli-buyuksehir', name: 'Kocaeli Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 40.8533, longitude: 29.8815 } },
       { id: 'izmit', name: 'İzmit', type: 'ilçe', coordinates: { latitude: 40.8533, longitude: 29.8815 } },
-      { id: 'gebze', name: 'Gebze', type: 'ilçe', coordinates: { latitude: 40.8000, longitude: 29.4333 } }
+      { id: 'gebze', name: 'Gebze', type: 'ilçe', coordinates: { latitude: 40.8000, longitude: 29.4333 } },
+      { id: 'korfez', name: 'Körfez', type: 'ilçe', coordinates: { latitude: 40.7667, longitude: 29.7333 } },
+      { id: 'golcuk', name: 'Gölcük', type: 'ilçe', coordinates: { latitude: 40.7000, longitude: 29.8167 } },
+      { id: 'derince', name: 'Derince', type: 'ilçe', coordinates: { latitude: 40.7667, longitude: 29.8167 } },
+      { id: 'kartepe', name: 'Kartepe', type: 'ilçe', coordinates: { latitude: 40.7500, longitude: 29.9833 } },
+      { id: 'basiskele', name: 'Başiskele', type: 'ilçe', coordinates: { latitude: 40.6333, longitude: 29.9000 } },
+      { id: 'cayirova', name: 'Çayırova', type: 'ilçe', coordinates: { latitude: 40.8167, longitude: 29.3833 } },
+      { id: 'dilovasi', name: 'Dilovası', type: 'ilçe', coordinates: { latitude: 40.7833, longitude: 29.5333 } },
+      { id: 'karamursel', name: 'Karamürsel', type: 'ilçe', coordinates: { latitude: 40.6833, longitude: 29.6167 } },
+      { id: 'kandira', name: 'Kandıra', type: 'ilçe', coordinates: { latitude: 41.0667, longitude: 29.4833 } }
     ]
   },
   {
@@ -554,7 +921,31 @@ export const turkeyCities: City[] = [
     municipalities: [
       { id: 'konya-buyuksehir', name: 'Konya Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 37.8667, longitude: 32.4833 } },
       { id: 'selcuklu', name: 'Selçuklu', type: 'ilçe', coordinates: { latitude: 37.8667, longitude: 32.4833 } },
-      { id: 'meram', name: 'Meram', type: 'ilçe', coordinates: { latitude: 37.8500, longitude: 32.4667 } }
+      { id: 'meram', name: 'Meram', type: 'ilçe', coordinates: { latitude: 37.8500, longitude: 32.4667 } },
+      { id: 'karatay', name: 'Karatay', type: 'ilçe', coordinates: { latitude: 37.8667, longitude: 32.4833 } },
+      { id: 'eregli', name: 'Ereğli', type: 'ilçe', coordinates: { latitude: 37.5167, longitude: 34.0500 } },
+      { id: 'aksehir', name: 'Akşehir', type: 'ilçe', coordinates: { latitude: 38.3500, longitude: 31.4167 } },
+      { id: 'beysehir', name: 'Beyşehir', type: 'ilçe', coordinates: { latitude: 37.6833, longitude: 31.7167 } },
+      { id: 'cumra', name: 'Çumra', type: 'ilçe', coordinates: { latitude: 37.5667, longitude: 32.7667 } },
+      { id: 'seydisehir', name: 'Seydişehir', type: 'ilçe', coordinates: { latitude: 37.4167, longitude: 31.8500 } },
+      { id: 'bozkir', name: 'Bozkır', type: 'ilçe', coordinates: { latitude: 37.1833, longitude: 32.2500 } },
+      { id: 'celtik', name: 'Çeltik', type: 'ilçe', coordinates: { latitude: 39.0333, longitude: 31.7833 } },
+      { id: 'cihanbeyli', name: 'Cihanbeyli', type: 'ilçe', coordinates: { latitude: 38.6500, longitude: 32.9333 } },
+      { id: 'kadinhani', name: 'Kadınhanı', type: 'ilçe', coordinates: { latitude: 38.2333, longitude: 32.2167 } },
+      { id: 'sarayonu', name: 'Sarayönü', type: 'ilçe', coordinates: { latitude: 38.2667, longitude: 31.9833 } },
+      { id: 'kulu', name: 'Kulu', type: 'ilçe', coordinates: { latitude: 39.1000, longitude: 33.0833 } },
+      { id: 'altinekin', name: 'Altınekin', type: 'ilçe', coordinates: { latitude: 38.3000, longitude: 32.8667 } },
+      { id: 'huyuk', name: 'Hüyük', type: 'ilçe', coordinates: { latitude: 37.9500, longitude: 31.6000 } },
+      { id: 'yunisler', name: 'Yunak', type: 'ilçe', coordinates: { latitude: 38.8167, longitude: 31.7333 } },
+      { id: 'tuzlukcu', name: 'Tuzlukçu', type: 'ilçe', coordinates: { latitude: 38.4833, longitude: 31.6333 } },
+      { id: 'doganhisar', name: 'Doğanhisar', type: 'ilçe', coordinates: { latitude: 38.1500, longitude: 31.6833 } },
+      { id: 'halkapinar', name: 'Halkapınar', type: 'ilçe', coordinates: { latitude: 37.4333, longitude: 34.1833 } },
+      { id: 'yali', name: 'Yalıhüyük', type: 'ilçe', coordinates: { latitude: 37.3000, longitude: 32.0833 } },
+      { id: 'emirgazi', name: 'Emirgazi', type: 'ilçe', coordinates: { latitude: 37.9000, longitude: 33.8333 } },
+      { id: 'guneysinir', name: 'Güneysınır', type: 'ilçe', coordinates: { latitude: 37.2667, longitude: 32.7167 } },
+      { id: 'taskent', name: 'Taşkent', type: 'ilçe', coordinates: { latitude: 36.9167, longitude: 32.4833 } },
+      { id: 'ahirli', name: 'Ahırlı', type: 'ilçe', coordinates: { latitude: 37.2333, longitude: 32.1167 } },
+      { id: 'hadim', name: 'Hadim', type: 'ilçe', coordinates: { latitude: 36.9833, longitude: 32.4500 } }
     ]
   },
   {
@@ -563,8 +954,20 @@ export const turkeyCities: City[] = [
     plateNumber: 43,
     coordinates: { latitude: 39.4167, longitude: 29.9833 },
     municipalities: [
-      { id: 'kutahya-merkez', name: 'Kütahya Merkez', type: 'ilçe', coordinates: { latitude: 39.4167, longitude: 29.9833 } },
-      { id: 'tavsanli', name: 'Tavşanlı', type: 'ilçe', coordinates: { latitude: 39.5500, longitude: 29.4833 } }
+      { id: 'kutahya-buyuksehir', name: 'Kütahya Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 39.4167, longitude: 29.9833 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 39.4167, longitude: 29.9833 } },
+      { id: 'tavsanli', name: 'Tavşanlı', type: 'ilçe', coordinates: { latitude: 39.5500, longitude: 29.4833 } },
+      { id: 'simav', name: 'Simav', type: 'ilçe', coordinates: { latitude: 39.0833, longitude: 28.9667 } },
+      { id: 'gediz', name: 'Gediz', type: 'ilçe', coordinates: { latitude: 38.9833, longitude: 29.4000 } },
+      { id: 'emet', name: 'Emet', type: 'ilçe', coordinates: { latitude: 39.3333, longitude: 29.2667 } },
+      { id: 'altintas', name: 'Altıntaş', type: 'ilçe', coordinates: { latitude: 39.0667, longitude: 30.1167 } },
+      { id: 'domanic', name: 'Domaniç', type: 'ilçe', coordinates: { latitude: 39.8000, longitude: 29.6167 } },
+      { id: 'hisarcik', name: 'Hisarcık', type: 'ilçe', coordinates: { latitude: 39.2500, longitude: 29.2333 } },
+      { id: 'cavdarhisar', name: 'Çavdarhisar', type: 'ilçe', coordinates: { latitude: 39.2000, longitude: 29.6167 } },
+      { id: 'saphane', name: 'Şaphane', type: 'ilçe', coordinates: { latitude: 39.0333, longitude: 29.2167 } },
+      { id: 'aslanapa', name: 'Aslanapa', type: 'ilçe', coordinates: { latitude: 39.2167, longitude: 29.8833 } },
+      { id: 'dumlupinar', name: 'Dumlupınar', type: 'ilçe', coordinates: { latitude: 38.8500, longitude: 29.9833 } },
+      { id: 'pazarlar', name: 'Pazarlar', type: 'ilçe', coordinates: { latitude: 38.9833, longitude: 29.1333 } }
     ]
   },
   {
@@ -575,7 +978,18 @@ export const turkeyCities: City[] = [
     municipalities: [
       { id: 'malatya-buyuksehir', name: 'Malatya Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 38.3552, longitude: 38.3095 } },
       { id: 'battalgazi', name: 'Battalgazi', type: 'ilçe', coordinates: { latitude: 38.3552, longitude: 38.3095 } },
-      { id: 'yesilyurt', name: 'Yeşilyurt', type: 'ilçe', coordinates: { latitude: 38.3000, longitude: 38.2500 } }
+      { id: 'yesilyurt', name: 'Yeşilyurt', type: 'ilçe', coordinates: { latitude: 38.3000, longitude: 38.2500 } },
+      { id: 'dogansehir', name: 'Doğanşehir', type: 'ilçe', coordinates: { latitude: 38.0833, longitude: 37.8833 } },
+      { id: 'akcadag', name: 'Akçadağ', type: 'ilçe', coordinates: { latitude: 38.3333, longitude: 37.9667 } },
+      { id: 'hekimhan', name: 'Hekimhan', type: 'ilçe', coordinates: { latitude: 38.8167, longitude: 37.9333 } },
+      { id: 'puturge', name: 'Pütürge', type: 'ilçe', coordinates: { latitude: 38.2000, longitude: 38.8667 } },
+      { id: 'yesilyurt', name: 'Yeşilyurt', type: 'ilçe', coordinates: { latitude: 38.3000, longitude: 38.2500 } },
+      { id: 'arapgir', name: 'Arapgir', type: 'ilçe', coordinates: { latitude: 39.0333, longitude: 38.4833 } },
+      { id: 'arguvan', name: 'Arguvan', type: 'ilçe', coordinates: { latitude: 38.7833, longitude: 38.2667 } },
+      { id: 'kuluncak', name: 'Kuluncak', type: 'ilçe', coordinates: { latitude: 38.8833, longitude: 37.6667 } },
+      { id: 'yazihan', name: 'Yazıhan', type: 'ilçe', coordinates: { latitude: 38.5833, longitude: 38.1833 } },
+      { id: 'darende', name: 'Darende', type: 'ilçe', coordinates: { latitude: 38.5500, longitude: 37.5167 } },
+      { id: 'kale', name: 'Kale', type: 'ilçe', coordinates: { latitude: 38.4000, longitude: 38.7500 } }
     ]
   },
   {
@@ -586,7 +1000,21 @@ export const turkeyCities: City[] = [
     municipalities: [
       { id: 'manisa-buyuksehir', name: 'Manisa Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 38.6191, longitude: 27.4289 } },
       { id: 'sehzadeler', name: 'Şehzadeler', type: 'ilçe', coordinates: { latitude: 38.6191, longitude: 27.4289 } },
-      { id: 'yunusemre', name: 'Yunusemre', type: 'ilçe', coordinates: { latitude: 38.6333, longitude: 27.4333 } }
+      { id: 'yunusemre', name: 'Yunusemre', type: 'ilçe', coordinates: { latitude: 38.6333, longitude: 27.4333 } },
+      { id: 'akhisar', name: 'Akhisar', type: 'ilçe', coordinates: { latitude: 38.9167, longitude: 27.8333 } },
+      { id: 'turgutlu', name: 'Turgutlu', type: 'ilçe', coordinates: { latitude: 38.5000, longitude: 27.7000 } },
+      { id: 'alaşehir', name: 'Alaşehir', type: 'ilçe', coordinates: { latitude: 38.3500, longitude: 28.5167 } },
+      { id: 'salihli', name: 'Salihli', type: 'ilçe', coordinates: { latitude: 38.4833, longitude: 28.1333 } },
+      { id: 'demirci', name: 'Demirci', type: 'ilçe', coordinates: { latitude: 39.0500, longitude: 28.6500 } },
+      { id: 'gordes', name: 'Gördes', type: 'ilçe', coordinates: { latitude: 38.9333, longitude: 28.2833 } },
+      { id: 'kula', name: 'Kula', type: 'ilçe', coordinates: { latitude: 38.5500, longitude: 28.6500 } },
+      { id: 'saruhanli', name: 'Saruhanlı', type: 'ilçe', coordinates: { latitude: 38.7333, longitude: 27.5667 } },
+      { id: 'soma', name: 'Soma', type: 'ilçe', coordinates: { latitude: 39.1833, longitude: 27.6000 } },
+      { id: 'kirkagac', name: 'Kırkağaç', type: 'ilçe', coordinates: { latitude: 39.1000, longitude: 27.6667 } },
+      { id: 'golmarmara', name: 'Gölmarmara', type: 'ilçe', coordinates: { latitude: 38.7167, longitude: 27.9167 } },
+      { id: 'ahmetli', name: 'Ahmetli', type: 'ilçe', coordinates: { latitude: 38.5167, longitude: 27.9333 } },
+      { id: 'koprubasi', name: 'Köprübaşı', type: 'ilçe', coordinates: { latitude: 38.7500, longitude: 28.4000 } },
+      { id: 'selendi', name: 'Selendi', type: 'ilçe', coordinates: { latitude: 38.7500, longitude: 28.8667 } }
     ]
   },
   {
@@ -597,7 +1025,16 @@ export const turkeyCities: City[] = [
     municipalities: [
       { id: 'kahramanmaras-buyuksehir', name: 'Kahramanmaraş Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 37.5858, longitude: 36.9371 } },
       { id: 'dundarli', name: 'Dulkadiroğlu', type: 'ilçe', coordinates: { latitude: 37.5858, longitude: 36.9371 } },
-      { id: 'onikişubat', name: 'Onikişubat', type: 'ilçe', coordinates: { latitude: 37.6000, longitude: 36.9333 } }
+      { id: 'onikişubat', name: 'Onikişubat', type: 'ilçe', coordinates: { latitude: 37.6000, longitude: 36.9333 } },
+      { id: 'afşin', name: 'Afşin', type: 'ilçe', coordinates: { latitude: 38.2500, longitude: 36.9167 } },
+      { id: 'elbistan', name: 'Elbistan', type: 'ilçe', coordinates: { latitude: 38.2000, longitude: 37.2000 } },
+      { id: 'goksun', name: 'Göksun', type: 'ilçe', coordinates: { latitude: 38.0167, longitude: 36.5000 } },
+      { id: 'andirin', name: 'Andırın', type: 'ilçe', coordinates: { latitude: 37.5667, longitude: 36.3500 } },
+      { id: 'pazarcik', name: 'Pazarcık', type: 'ilçe', coordinates: { latitude: 37.4833, longitude: 37.3000 } },
+      { id: 'turkoglu', name: 'Türkoğlu', type: 'ilçe', coordinates: { latitude: 37.3833, longitude: 36.8500 } },
+      { id: 'caglayancerit', name: 'Çağlayancerit', type: 'ilçe', coordinates: { latitude: 37.7500, longitude: 37.2833 } },
+      { id: 'nurhak', name: 'Nurhak', type: 'ilçe', coordinates: { latitude: 37.9667, longitude: 37.4333 } },
+      { id: 'ekinozu', name: 'Ekinözü', type: 'ilçe', coordinates: { latitude: 38.0667, longitude: 37.1833 } }
     ]
   },
   {
@@ -608,7 +1045,15 @@ export const turkeyCities: City[] = [
     municipalities: [
       { id: 'mardin-buyuksehir', name: 'Mardin Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 37.3212, longitude: 40.7245 } },
       { id: 'artuklu', name: 'Artuklu', type: 'ilçe', coordinates: { latitude: 37.3212, longitude: 40.7245 } },
-      { id: 'kiziltepe', name: 'Kızıltepe', type: 'ilçe', coordinates: { latitude: 37.1833, longitude: 40.5833 } }
+      { id: 'kiziltepe', name: 'Kızıltepe', type: 'ilçe', coordinates: { latitude: 37.1833, longitude: 40.5833 } },
+      { id: 'midyat', name: 'Midyat', type: 'ilçe', coordinates: { latitude: 37.4167, longitude: 41.3667 } },
+      { id: 'nusaybin', name: 'Nusaybin', type: 'ilçe', coordinates: { latitude: 37.0667, longitude: 41.2167 } },
+      { id: 'derik', name: 'Derik', type: 'ilçe', coordinates: { latitude: 37.3667, longitude: 40.2667 } },
+      { id: 'mazidagi', name: 'Mazıdağı', type: 'ilçe', coordinates: { latitude: 37.4833, longitude: 40.4833 } },
+      { id: 'savur', name: 'Savur', type: 'ilçe', coordinates: { latitude: 37.5500, longitude: 40.8833 } },
+      { id: 'yesilli', name: 'Yeşilli', type: 'ilçe', coordinates: { latitude: 37.3333, longitude: 40.8167 } },
+      { id: 'dargecit', name: 'Dargeçit', type: 'ilçe', coordinates: { latitude: 37.5500, longitude: 41.7167 } },
+      { id: 'ozalp', name: 'Ömerli', type: 'ilçe', coordinates: { latitude: 37.4000, longitude: 41.9667 } }
     ]
   },
   {
@@ -619,7 +1064,18 @@ export const turkeyCities: City[] = [
     municipalities: [
       { id: 'mugla-buyuksehir', name: 'Muğla Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 37.2154, longitude: 28.3636 } },
       { id: 'mentese', name: 'Menteşe', type: 'ilçe', coordinates: { latitude: 37.2154, longitude: 28.3636 } },
-      { id: 'bodrum', name: 'Bodrum', type: 'ilçe', coordinates: { latitude: 37.0333, longitude: 27.4333 } }
+      { id: 'bodrum', name: 'Bodrum', type: 'ilçe', coordinates: { latitude: 37.0333, longitude: 27.4333 } },
+      { id: 'fethiye', name: 'Fethiye', type: 'ilçe', coordinates: { latitude: 36.6167, longitude: 29.1167 } },
+      { id: 'marmaris', name: 'Marmaris', type: 'ilçe', coordinates: { latitude: 36.8500, longitude: 28.2667 } },
+      { id: 'milas', name: 'Milas', type: 'ilçe', coordinates: { latitude: 37.3167, longitude: 27.7833 } },
+      { id: 'datca', name: 'Datça', type: 'ilçe', coordinates: { latitude: 36.7333, longitude: 27.6833 } },
+      { id: 'koycegiz', name: 'Köyceğiz', type: 'ilçe', coordinates: { latitude: 36.9667, longitude: 28.6833 } },
+      { id: 'ortaca', name: 'Ortaca', type: 'ilçe', coordinates: { latitude: 36.8333, longitude: 28.7667 } },
+      { id: 'ula', name: 'Ula', type: 'ilçe', coordinates: { latitude: 37.1000, longitude: 28.4167 } },
+      { id: 'yatan', name: 'Yatağan', type: 'ilçe', coordinates: { latitude: 37.3333, longitude: 28.1500 } },
+      { id: 'dalaman', name: 'Dalaman', type: 'ilçe', coordinates: { latitude: 36.7667, longitude: 28.8000 } },
+      { id: 'seydikemer', name: 'Seydikemer', type: 'ilçe', coordinates: { latitude: 36.6500, longitude: 29.1167 } },
+      { id: 'kavaklidere', name: 'Kavaklıdere', type: 'ilçe', coordinates: { latitude: 37.4333, longitude: 28.3667 } }
     ]
   },
   {
@@ -628,8 +1084,13 @@ export const turkeyCities: City[] = [
     plateNumber: 49,
     coordinates: { latitude: 38.7432, longitude: 41.5065 },
     municipalities: [
-      { id: 'mus-merkez', name: 'Muş Merkez', type: 'ilçe', coordinates: { latitude: 38.7432, longitude: 41.5065 } },
-      { id: 'bulanik', name: 'Bulanık', type: 'ilçe', coordinates: { latitude: 39.0833, longitude: 42.2667 } }
+      { id: 'mus-buyuksehir', name: 'Muş Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 38.7432, longitude: 41.5065 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 38.7432, longitude: 41.5065 } },
+      { id: 'bulanik', name: 'Bulanık', type: 'ilçe', coordinates: { latitude: 39.0833, longitude: 42.2667 } },
+      { id: 'malazgirt', name: 'Malazgirt', type: 'ilçe', coordinates: { latitude: 39.1500, longitude: 42.5333 } },
+      { id: 'varto', name: 'Varto', type: 'ilçe', coordinates: { latitude: 39.1667, longitude: 41.4667 } },
+      { id: 'haskoy', name: 'Hasköy', type: 'ilçe', coordinates: { latitude: 38.6833, longitude: 41.6833 } },
+      { id: 'korkut', name: 'Korkut', type: 'ilçe', coordinates: { latitude: 38.7333, longitude: 41.7833 } }
     ]
   },
   {
@@ -638,8 +1099,15 @@ export const turkeyCities: City[] = [
     plateNumber: 50,
     coordinates: { latitude: 38.6244, longitude: 34.7239 },
     municipalities: [
-      { id: 'nevsehir-merkez', name: 'Nevşehir Merkez', type: 'ilçe', coordinates: { latitude: 38.6244, longitude: 34.7239 } },
-      { id: 'urgup', name: 'Ürgüp', type: 'ilçe', coordinates: { latitude: 38.6333, longitude: 34.9167 } }
+      { id: 'nevsehir-buyuksehir', name: 'Nevşehir Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 38.6244, longitude: 34.7239 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 38.6244, longitude: 34.7239 } },
+      { id: 'urgup', name: 'Ürgüp', type: 'ilçe', coordinates: { latitude: 38.6333, longitude: 34.9167 } },
+      { id: 'avanos', name: 'Avanos', type: 'ilçe', coordinates: { latitude: 38.7167, longitude: 34.8500 } },
+      { id: 'gulsehir', name: 'Gülşehir', type: 'ilçe', coordinates: { latitude: 38.7500, longitude: 34.6167 } },
+      { id: 'hacibektas', name: 'Hacıbektaş', type: 'ilçe', coordinates: { latitude: 38.9333, longitude: 34.5500 } },
+      { id: 'kozakli', name: 'Kozaklı', type: 'ilçe', coordinates: { latitude: 39.2167, longitude: 34.2167 } },
+      { id: 'derinkuyu', name: 'Derinkuyu', type: 'ilçe', coordinates: { latitude: 38.3667, longitude: 34.7333 } },
+      { id: 'acigol', name: 'Acıgöl', type: 'ilçe', coordinates: { latitude: 38.5500, longitude: 34.5167 } }
     ]
   },
   {
@@ -956,6 +1424,217 @@ export const turkeyCities: City[] = [
       { id: 'osmaniye-buyuksehir', name: 'Osmaniye Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 37.0742, longitude: 36.2500 } },
       { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 37.0742, longitude: 36.2500 } },
       { id: 'kadirli', name: 'Kadirli', type: 'ilçe', coordinates: { latitude: 37.3667, longitude: 36.1000 } }
+    ]
+  },
+  {
+    id: 'rize',
+    name: 'Rize',
+    plateNumber: 53,
+    coordinates: { latitude: 41.0201, longitude: 40.5234 },
+    municipalities: [
+      { id: 'rize-buyuksehir', name: 'Rize Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 41.0201, longitude: 40.5234 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 41.0201, longitude: 40.5234 } },
+      { id: 'ardesen', name: 'Ardeşen', type: 'ilçe', coordinates: { latitude: 41.1833, longitude: 40.9833 } },
+      { id: 'pazar', name: 'Pazar', type: 'ilçe', coordinates: { latitude: 41.1833, longitude: 40.8833 } },
+      { id: 'cayeli', name: 'Çayeli', type: 'ilçe', coordinates: { latitude: 41.0833, longitude: 40.7333 } },
+      { id: 'findikli', name: 'Fındıklı', type: 'ilçe', coordinates: { latitude: 41.2667, longitude: 41.1333 } },
+      { id: 'kalkandere', name: 'Kalkandere', type: 'ilçe', coordinates: { latitude: 40.9333, longitude: 40.4333 } },
+      { id: 'ikizdere', name: 'İkizdere', type: 'ilçe', coordinates: { latitude: 40.7833, longitude: 40.5500 } },
+      { id: 'guneysu', name: 'Güneysu', type: 'ilçe', coordinates: { latitude: 40.9833, longitude: 40.6000 } },
+      { id: 'derepazari', name: 'Derepazarı', type: 'ilçe', coordinates: { latitude: 41.0167, longitude: 40.4333 } },
+      { id: 'camlihemsin', name: 'Çamlıhemşin', type: 'ilçe', coordinates: { latitude: 41.0500, longitude: 41.0167 } },
+      { id: 'hemsin', name: 'Hemşin', type: 'ilçe', coordinates: { latitude: 41.0500, longitude: 40.9000 } },
+      { id: 'iyidere', name: 'İyidere', type: 'ilçe', coordinates: { latitude: 41.0167, longitude: 40.3667 } }
+    ]
+  },
+  {
+    id: 'sakarya',
+    name: 'Sakarya',
+    plateNumber: 54,
+    coordinates: { latitude: 40.7569, longitude: 30.3781 },
+    municipalities: [
+      { id: 'sakarya-buyuksehir', name: 'Sakarya Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 40.7569, longitude: 30.3781 } },
+      { id: 'adapazari', name: 'Adapazarı', type: 'ilçe', coordinates: { latitude: 40.7569, longitude: 30.3781 } },
+      { id: 'serdivan', name: 'Serdivan', type: 'ilçe', coordinates: { latitude: 40.7667, longitude: 30.3667 } },
+      { id: 'akyazi', name: 'Akyazı', type: 'ilçe', coordinates: { latitude: 40.6833, longitude: 30.6167 } },
+      { id: 'hendek', name: 'Hendek', type: 'ilçe', coordinates: { latitude: 40.8000, longitude: 30.7500 } },
+      { id: 'karasu', name: 'Karasu', type: 'ilçe', coordinates: { latitude: 41.1000, longitude: 30.6833 } },
+      { id: 'geyve', name: 'Geyve', type: 'ilçe', coordinates: { latitude: 40.5000, longitude: 30.2833 } },
+      { id: 'sapanca', name: 'Sapanca', type: 'ilçe', coordinates: { latitude: 40.6833, longitude: 30.2667 } },
+      { id: 'pamukova', name: 'Pamukova', type: 'ilçe', coordinates: { latitude: 40.5000, longitude: 30.1667 } },
+      { id: 'arifiye', name: 'Arifiye', type: 'ilçe', coordinates: { latitude: 40.7167, longitude: 30.3500 } },
+      { id: 'ferizli', name: 'Ferizli', type: 'ilçe', coordinates: { latitude: 40.8667, longitude: 30.4833 } },
+      { id: 'kaynarca', name: 'Kaynarca', type: 'ilçe', coordinates: { latitude: 41.0333, longitude: 30.3000 } },
+      { id: 'karapurek', name: 'Karapürçek', type: 'ilçe', coordinates: { latitude: 40.6333, longitude: 30.5500 } },
+      { id: 'sogutlu', name: 'Söğütlü', type: 'ilçe', coordinates: { latitude: 40.9000, longitude: 30.4667 } },
+      { id: 'tarakli', name: 'Taraklı', type: 'ilçe', coordinates: { latitude: 40.4000, longitude: 30.5000 } },
+      { id: 'kocaali', name: 'Kocaali', type: 'ilçe', coordinates: { latitude: 41.0500, longitude: 30.8500 } }
+    ]
+  },
+  {
+    id: 'samsun',
+    name: 'Samsun',
+    plateNumber: 55,
+    coordinates: { latitude: 41.2867, longitude: 36.3300 },
+    municipalities: [
+      { id: 'samsun-buyuksehir', name: 'Samsun Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 41.2867, longitude: 36.3300 } },
+      { id: 'ilkadim', name: 'İlkadım', type: 'ilçe', coordinates: { latitude: 41.2867, longitude: 36.3300 } },
+      { id: 'canik', name: 'Canik', type: 'ilçe', coordinates: { latitude: 41.2667, longitude: 36.3333 } },
+      { id: 'atakum', name: 'Atakum', type: 'ilçe', coordinates: { latitude: 41.3000, longitude: 36.3167 } },
+      { id: 'tekkekoy', name: 'Tekkeköy', type: 'ilçe', coordinates: { latitude: 41.2167, longitude: 36.4667 } },
+      { id: 'bafra', name: 'Bafra', type: 'ilçe', coordinates: { latitude: 41.5667, longitude: 35.9000 } },
+      { id: 'carsamba', name: 'Çarşamba', type: 'ilçe', coordinates: { latitude: 41.2000, longitude: 36.7333 } },
+      { id: 'havza', name: 'Havza', type: 'ilçe', coordinates: { latitude: 40.9667, longitude: 35.6667 } },
+      { id: 'vezirkopru', name: 'Vezirköprü', type: 'ilçe', coordinates: { latitude: 41.1333, longitude: 35.4667 } },
+      { id: 'alacam', name: 'Alaçam', type: 'ilçe', coordinates: { latitude: 41.6167, longitude: 35.6000 } },
+      { id: 'salipazari', name: 'Salıpazarı', type: 'ilçe', coordinates: { latitude: 41.0833, longitude: 36.8333 } },
+      { id: 'kavak', name: 'Kavak', type: 'ilçe', coordinates: { latitude: 41.0667, longitude: 36.0333 } },
+      { id: 'asarcik', name: 'Asarcık', type: 'ilçe', coordinates: { latitude: 41.0333, longitude: 36.2333 } },
+      { id: '19-mayis', name: '19 Mayıs', type: 'ilçe', coordinates: { latitude: 41.4833, longitude: 36.0833 } },
+      { id: 'ayvacik-samsun', name: 'Ayvacık', type: 'ilçe', coordinates: { latitude: 40.9833, longitude: 36.6333 } },
+      { id: 'ladik', name: 'Ladik', type: 'ilçe', coordinates: { latitude: 40.9167, longitude: 35.8833 } }
+    ]
+  },
+  {
+    id: 'siirt',
+    name: 'Siirt',
+    plateNumber: 56,
+    coordinates: { latitude: 37.9333, longitude: 41.9500 },
+    municipalities: [
+      { id: 'siirt-buyuksehir', name: 'Siirt Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 37.9333, longitude: 41.9500 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 37.9333, longitude: 41.9500 } },
+      { id: 'kurtalan', name: 'Kurtalan', type: 'ilçe', coordinates: { latitude: 37.9333, longitude: 41.7000 } },
+      { id: 'pervari', name: 'Pervari', type: 'ilçe', coordinates: { latitude: 37.9333, longitude: 42.5500 } },
+      { id: 'sirvan', name: 'Şirvan', type: 'ilçe', coordinates: { latitude: 38.0667, longitude: 42.0167 } },
+      { id: 'baykan', name: 'Baykan', type: 'ilçe', coordinates: { latitude: 38.1667, longitude: 41.7833 } },
+      { id: 'eruh', name: 'Eruh', type: 'ilçe', coordinates: { latitude: 37.7000, longitude: 42.1833 } },
+      { id: 'tillo', name: 'Tillo', type: 'ilçe', coordinates: { latitude: 37.9500, longitude: 42.0167 } }
+    ]
+  },
+  {
+    id: 'sinop',
+    name: 'Sinop',
+    plateNumber: 57,
+    coordinates: { latitude: 42.0231, longitude: 35.1531 },
+    municipalities: [
+      { id: 'sinop-buyuksehir', name: 'Sinop Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 42.0231, longitude: 35.1531 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 42.0231, longitude: 35.1531 } },
+      { id: 'boyabat', name: 'Boyabat', type: 'ilçe', coordinates: { latitude: 41.4667, longitude: 34.7667 } },
+      { id: 'ayancik', name: 'Ayancık', type: 'ilçe', coordinates: { latitude: 41.9500, longitude: 34.5833 } },
+      { id: 'duragan', name: 'Durağan', type: 'ilçe', coordinates: { latitude: 41.4167, longitude: 35.0500 } },
+      { id: 'erfelek', name: 'Erfelek', type: 'ilçe', coordinates: { latitude: 41.8833, longitude: 34.9167 } },
+      { id: 'turkeli', name: 'Türkeli', type: 'ilçe', coordinates: { latitude: 41.9500, longitude: 34.3333 } },
+      { id: 'gerze', name: 'Gerze', type: 'ilçe', coordinates: { latitude: 41.8167, longitude: 35.2000 } },
+      { id: 'sarayduzu', name: 'Saraydüzü', type: 'ilçe', coordinates: { latitude: 41.3333, longitude: 34.8500 } },
+      { id: 'dikmen', name: 'Dikmen', type: 'ilçe', coordinates: { latitude: 41.6500, longitude: 35.2667 } }
+    ]
+  },
+  {
+    id: 'sivas',
+    name: 'Sivas',
+    plateNumber: 58,
+    coordinates: { latitude: 39.7477, longitude: 37.0179 },
+    municipalities: [
+      { id: 'sivas-buyuksehir', name: 'Sivas Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 39.7477, longitude: 37.0179 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 39.7477, longitude: 37.0179 } },
+      { id: 'sarkisla', name: 'Şarkışla', type: 'ilçe', coordinates: { latitude: 39.3500, longitude: 36.4000 } },
+      { id: 'yildizeli', name: 'Yıldızeli', type: 'ilçe', coordinates: { latitude: 39.8667, longitude: 36.6000 } },
+      { id: 'suşehri', name: 'Suşehri', type: 'ilçe', coordinates: { latitude: 40.1667, longitude: 38.0833 } },
+      { id: 'gemerek', name: 'Gemerek', type: 'ilçe', coordinates: { latitude: 39.1833, longitude: 36.0667 } },
+      { id: 'kangal', name: 'Kangal', type: 'ilçe', coordinates: { latitude: 39.2333, longitude: 37.3833 } },
+      { id: 'hafik', name: 'Hafik', type: 'ilçe', coordinates: { latitude: 39.8500, longitude: 37.3833 } },
+      { id: 'zara', name: 'Zara', type: 'ilçe', coordinates: { latitude: 39.8833, longitude: 37.7500 } },
+      { id: 'koyseri', name: 'Koyulhisar', type: 'ilçe', coordinates: { latitude: 40.3000, longitude: 37.8167 } },
+      { id: 'divrigi', name: 'Divriği', type: 'ilçe', coordinates: { latitude: 39.3667, longitude: 38.1167 } },
+      { id: 'gurun', name: 'Gürün', type: 'ilçe', coordinates: { latitude: 38.7167, longitude: 37.2667 } },
+      { id: 'akincilar', name: 'Akıncılar', type: 'ilçe', coordinates: { latitude: 40.0833, longitude: 38.3500 } },
+      { id: 'altinyayla', name: 'Altınyayla', type: 'ilçe', coordinates: { latitude: 39.2667, longitude: 36.7500 } },
+      { id: 'dogansar', name: 'Doğanşar', type: 'ilçe', coordinates: { latitude: 40.2167, longitude: 37.5167 } },
+      { id: 'golova', name: 'Gölova', type: 'ilçe', coordinates: { latitude: 40.0667, longitude: 38.6000 } },
+      { id: 'imranli', name: 'İmranlı', type: 'ilçe', coordinates: { latitude: 39.8833, longitude: 38.1167 } },
+      { id: 'ulas', name: 'Ulaş', type: 'ilçe', coordinates: { latitude: 39.4500, longitude: 37.0333 } }
+    ]
+  },
+  {
+    id: 'tekirdag',
+    name: 'Tekirdağ',
+    plateNumber: 59,
+    coordinates: { latitude: 40.9781, longitude: 27.5117 },
+    municipalities: [
+      { id: 'tekirdag-buyuksehir', name: 'Tekirdağ Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 40.9781, longitude: 27.5117 } },
+      { id: 'suleymanpasa', name: 'Süleymanpaşa', type: 'ilçe', coordinates: { latitude: 40.9781, longitude: 27.5117 } },
+      { id: 'corlu', name: 'Çorlu', type: 'ilçe', coordinates: { latitude: 41.1500, longitude: 27.8000 } },
+      { id: 'ergene', name: 'Ergene', type: 'ilçe', coordinates: { latitude: 41.1833, longitude: 27.3500 } },
+      { id: 'kapakli', name: 'Kapaklı', type: 'ilçe', coordinates: { latitude: 41.3333, longitude: 27.9833 } },
+      { id: 'saray', name: 'Saray', type: 'ilçe', coordinates: { latitude: 41.4333, longitude: 27.9167 } },
+      { id: 'malkara', name: 'Malkara', type: 'ilçe', coordinates: { latitude: 40.8833, longitude: 26.9000 } },
+      { id: 'hayrabolu', name: 'Hayrabolu', type: 'ilçe', coordinates: { latitude: 41.2167, longitude: 27.1000 } },
+      { id: 'sarkoy', name: 'Şarköy', type: 'ilçe', coordinates: { latitude: 40.6167, longitude: 27.1167 } },
+      { id: 'murath', name: 'Muratlı', type: 'ilçe', coordinates: { latitude: 41.1667, longitude: 27.5167 } },
+      { id: 'marmaraereglisi', name: 'Marmaraereğlisi', type: 'ilçe', coordinates: { latitude: 40.9667, longitude: 27.9500 } }
+    ]
+  },
+  {
+    id: 'tokat',
+    name: 'Tokat',
+    plateNumber: 60,
+    coordinates: { latitude: 40.3167, longitude: 36.5500 },
+    municipalities: [
+      { id: 'tokat-buyuksehir', name: 'Tokat Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 40.3167, longitude: 36.5500 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 40.3167, longitude: 36.5500 } },
+      { id: 'turhal', name: 'Turhal', type: 'ilçe', coordinates: { latitude: 40.3833, longitude: 36.0833 } },
+      { id: 'zile', name: 'Zile', type: 'ilçe', coordinates: { latitude: 40.3000, longitude: 35.8833 } },
+      { id: 'reşadiye', name: 'Reşadiye', type: 'ilçe', coordinates: { latitude: 40.4333, longitude: 37.3667 } },
+      { id: 'niksar', name: 'Niksar', type: 'ilçe', coordinates: { latitude: 40.5833, longitude: 36.9667 } },
+      { id: 'almus', name: 'Almus', type: 'ilçe', coordinates: { latitude: 40.3833, longitude: 36.9000 } },
+      { id: 'artova', name: 'Artova', type: 'ilçe', coordinates: { latitude: 40.1167, longitude: 36.3000 } },
+      { id: 'erbaa', name: 'Erbaa', type: 'ilçe', coordinates: { latitude: 40.6667, longitude: 36.5667 } },
+      { id: 'pazar', name: 'Pazar', type: 'ilçe', coordinates: { latitude: 40.2833, longitude: 36.2833 } },
+      { id: 'yesilyurt', name: 'Yeşilyurt', type: 'ilçe', coordinates: { latitude: 40.0000, longitude: 36.2333 } },
+      { id: 'basciftlik', name: 'Başçiftlik', type: 'ilçe', coordinates: { latitude: 40.5500, longitude: 37.1667 } },
+      { id: 'sulusaray', name: 'Sulusaray', type: 'ilçe', coordinates: { latitude: 39.9833, longitude: 36.0833 } }
+    ]
+  },
+  {
+    id: 'trabzon',
+    name: 'Trabzon',
+    plateNumber: 61,
+    coordinates: { latitude: 41.0015, longitude: 39.7178 },
+    municipalities: [
+      { id: 'trabzon-buyuksehir', name: 'Trabzon Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 41.0015, longitude: 39.7178 } },
+      { id: 'ortahisar', name: 'Ortahisar', type: 'ilçe', coordinates: { latitude: 41.0015, longitude: 39.7178 } },
+      { id: 'akcaabat', name: 'Akçaabat', type: 'ilçe', coordinates: { latitude: 41.0167, longitude: 39.5667 } },
+      { id: 'arakin', name: 'Araklı', type: 'ilçe', coordinates: { latitude: 40.9333, longitude: 39.9333 } },
+      { id: 'of', name: 'Of', type: 'ilçe', coordinates: { latitude: 40.9500, longitude: 40.2667 } },
+      { id: 'sürmene', name: 'Sürmene', type: 'ilçe', coordinates: { latitude: 40.9000, longitude: 40.1167 } },
+      { id: 'yomra', name: 'Yomra', type: 'ilçe', coordinates: { latitude: 40.9500, longitude: 39.8667 } },
+      { id: 'besikduzu', name: 'Beşikdüzü', type: 'ilçe', coordinates: { latitude: 41.0500, longitude: 39.2333 } },
+      { id: 'vakfikebir', name: 'Vakfıkebir', type: 'ilçe', coordinates: { latitude: 41.0333, longitude: 39.2833 } },
+      { id: 'caykara', name: 'Çaykara', type: 'ilçe', coordinates: { latitude: 40.7500, longitude: 40.2333 } },
+      { id: 'dernekpazari', name: 'Dernekpazarı', type: 'ilçe', coordinates: { latitude: 40.8000, longitude: 40.2333 } },
+      { id: 'duzkoy', name: 'Düzköy', type: 'ilçe', coordinates: { latitude: 40.8667, longitude: 39.4167 } },
+      { id: 'hayrat', name: 'Hayrat', type: 'ilçe', coordinates: { latitude: 40.8833, longitude: 40.3667 } },
+      { id: 'koprubasi', name: 'Köprübaşı', type: 'ilçe', coordinates: { latitude: 40.8167, longitude: 40.1167 } },
+      { id: 'maçka', name: 'Maçka', type: 'ilçe', coordinates: { latitude: 40.8167, longitude: 39.6167 } },
+      { id: 'salpazari', name: 'Salpazarı', type: 'ilçe', coordinates: { latitude: 40.9333, longitude: 39.1833 } },
+      { id: 'tonya', name: 'Tonya', type: 'ilçe', coordinates: { latitude: 40.8833, longitude: 39.2833 } }
+    ]
+  },
+  {
+    id: 'tunceli',
+    name: 'Tunceli',
+    plateNumber: 62,
+    coordinates: { latitude: 39.1079, longitude: 39.5401 },
+    municipalities: [
+      { id: 'tunceli-buyuksehir', name: 'Tunceli Büyükşehir', type: 'büyükşehir', coordinates: { latitude: 39.1079, longitude: 39.5401 } },
+      { id: 'merkez', name: 'Merkez', type: 'ilçe', coordinates: { latitude: 39.1079, longitude: 39.5401 } },
+      { id: 'pertek', name: 'Pertek', type: 'ilçe', coordinates: { latitude: 38.8667, longitude: 39.3167 } },
+      { id: 'mazgirt', name: 'Mazgirt', type: 'ilçe', coordinates: { latitude: 39.0167, longitude: 39.6000 } },
+      { id: 'cemisgezek', name: 'Çemişgezek', type: 'ilçe', coordinates: { latitude: 39.0667, longitude: 38.9167 } },
+      { id: 'ovacik', name: 'Ovacık', type: 'ilçe', coordinates: { latitude: 39.3500, longitude: 39.2167 } },
+      { id: 'hozat', name: 'Hozat', type: 'ilçe', coordinates: { latitude: 39.1000, longitude: 39.2167 } },
+      { id: 'nazimiye', name: 'Nazımiye', type: 'ilçe', coordinates: { latitude: 39.1833, longitude: 39.8333 } },
+      { id: 'pulumur', name: 'Pülümür', type: 'ilçe', coordinates: { latitude: 39.4833, longitude: 39.9000 } }
     ]
   },
   {
