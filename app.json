@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "worite",
+    "name": "Worite - Belediye Değerlendirme",
     "slug": "worite",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,15 +8,38 @@
     "scheme": "worite",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "description": "Türkiye'deki belediye hizmetlerini fotoğraflayın, değerlendirin ve şehrinizi daha iyi hale getirin. Worite ile vatandaş olarak sesinizi duyurun!",
+    "privacy": "public",
+    "primaryColor": "#6366f1",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.worite.app",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Belediye hizmetlerini değerlendirmek için konumunuza ihtiyacımız var.",
+        "NSCameraUsageDescription": "Belediye hizmetlerini fotoğraflamak için kamera izni gerekiyor.",
+        "NSPhotoLibraryUsageDescription": "Belediye hizmetlerini fotoğraflamak için galeri izni gerekiyor.",
+        "CFBundleDisplayName": "Worite",
+        "CFBundleName": "Worite"
+      },
+      "appStoreUrl": "https://apps.apple.com/app/worite/id1234567890",
+      "associatedDomains": ["applinks:worite.app"]
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.worite.app",
+      "versionCode": 1,
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -49,6 +72,11 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id-here"
+      }
     }
   }
 }
