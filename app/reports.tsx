@@ -22,6 +22,7 @@ import {
     Title
 } from 'react-native-paper';
 import { useLocation } from '../context/LocationContext';
+import { Municipality } from '../utils/turkeyData';
 // import { getCooldownInfo, formatTimeRemaining } from '../utils/cooldown';
 
 const { width } = Dimensions.get('window');
@@ -116,7 +117,7 @@ export default function ReportsScreen() {
       
       // Eğer hiç değerlendirme yoksa ve konum belirlenmişse, o şehrin belediyelerini göster
       if (allEvaluations.length === 0 && currentCity) {
-        const defaultMunicipalities = currentCity.municipalities.map(municipality => ({
+        const defaultMunicipalities = currentCity.municipalities.map((municipality: Municipality) => ({
           id: municipality.id,
           name: municipality.name,
           type: municipality.type as 'büyükşehir' | 'ilçe',
@@ -140,7 +141,7 @@ export default function ReportsScreen() {
       const municipalityMap: { [id: string]: MunicipalityReport } = {};
       
       // Önce mevcut şehrin tüm belediyelerini ekle (sayaçları 0 ile)
-      currentCity.municipalities.forEach(municipality => {
+      currentCity.municipalities.forEach((municipality: Municipality) => {
         municipalityMap[municipality.id] = {
           id: municipality.id,
           name: municipality.name,
@@ -155,44 +156,50 @@ export default function ReportsScreen() {
       
       // Sonra gerçek değerlendirmeleri ekle
       allEvaluations.forEach((evaluation: any) => {
-        // Belediye ID'sini doğru şekilde al
-        const municipalityId = evaluation.municipalityId || evaluation.municipalityName;
         const municipalityName = evaluation.municipalityName || 'Bilinmeyen Belediye';
         
-        // Eğer belediye map'te yoksa ekle
-        if (!municipalityMap[municipalityId]) {
-          municipalityMap[municipalityId] = {
-            id: municipalityId,
-            name: municipalityName,
-            type: 'ilçe', // Varsayılan olarak ilçe
-            totalSubmissions: 0,
-            positiveVotes: 0,
-            negativeVotes: 0,
-            topSubmissions: [],
-            coordinates: {
-              latitude: evaluation.location?.latitude || currentCity.coordinates.latitude,
-              longitude: evaluation.location?.longitude || currentCity.coordinates.longitude,
-            },
-          };
+        // Belediye adına göre eşleştirme yap
+        let matchedMunicipality = null;
+        
+        // Önce tam eşleşme ara
+        matchedMunicipality = currentCity.municipalities.find((m: Municipality) => 
+          m.name === municipalityName || 
+          m.name.includes(municipalityName) || 
+          municipalityName.includes(m.name)
+        );
+        
+        // Eğer bulunamazsa, kısmi eşleşme ara
+        if (!matchedMunicipality) {
+          matchedMunicipality = currentCity.municipalities.find((m: Municipality) => 
+            m.name.toLowerCase().includes(municipalityName.toLowerCase()) ||
+            municipalityName.toLowerCase().includes(m.name.toLowerCase())
+          );
         }
         
-        municipalityMap[municipalityId].totalSubmissions++;
-        
-        // Vote tipini doğru şekilde kontrol et
-        if (evaluation.vote === 'positive' || evaluation.type === 'positive') {
-          municipalityMap[municipalityId].positiveVotes++;
-        } else if (evaluation.vote === 'negative' || evaluation.type === 'negative') {
-          municipalityMap[municipalityId].negativeVotes++;
+        // Eğer hala bulunamazsa, varsayılan olarak ilk belediyeyi kullan
+        if (!matchedMunicipality && currentCity.municipalities.length > 0) {
+          matchedMunicipality = currentCity.municipalities[0];
         }
         
-        // En iyi değerlendirmeler için ekle
-        municipalityMap[municipalityId].topSubmissions.push({
-          id: evaluation.id || Date.now().toString(),
-          description: evaluation.description || '',
-          vote: (evaluation.vote || evaluation.type) as 'positive' | 'negative',
-          createdAt: evaluation.date || new Date().toISOString(),
-          score: 1
-        });
+        if (matchedMunicipality) {
+          municipalityMap[matchedMunicipality.id].totalSubmissions++;
+          
+          // Vote tipini doğru şekilde kontrol et
+          if (evaluation.vote === 'positive' || evaluation.type === 'positive') {
+            municipalityMap[matchedMunicipality.id].positiveVotes++;
+          } else if (evaluation.vote === 'negative' || evaluation.type === 'negative') {
+            municipalityMap[matchedMunicipality.id].negativeVotes++;
+          }
+          
+          // En iyi değerlendirmeler için ekle
+          municipalityMap[matchedMunicipality.id].topSubmissions.push({
+            id: evaluation.id || Date.now().toString(),
+            description: evaluation.description || '',
+            vote: (evaluation.vote || evaluation.type) as 'positive' | 'negative',
+            createdAt: evaluation.date || new Date().toISOString(),
+            score: 1
+          });
+        }
       });
       
       const finalReports = Object.values(municipalityMap);
@@ -399,7 +406,7 @@ export default function ReportsScreen() {
                 </View>
                 
                 <View style={styles.summaryList}>
-                  {[...reports].sort((a, b) => {
+                  {currentCity ? currentCity.municipalities.sort((a: Municipality, b: Municipality) => {
                     // Büyükşehir belediyesi her zaman en üstte
                     if (a.type === 'büyükşehir' && b.type === 'ilçe') return -1;
                     if (a.type === 'ilçe' && b.type === 'büyükşehir') return 1;
@@ -408,46 +415,57 @@ export default function ReportsScreen() {
                       return a.name.localeCompare(b.name, 'tr');
                     }
                     return 0;
-                  }).map((report) => {
+                  }).map((municipality: Municipality) => {
+                    // Bu belediye için gerçek değerlendirme verilerini bul
+                    const reportData = reports.find(report => report.id === municipality.id) || {
+                      totalSubmissions: 0,
+                      positiveVotes: 0,
+                      negativeVotes: 0
+                    };
+                    
                     return (
-                        <View key={report.id} style={styles.summaryItem}>
+                        <View key={municipality.id} style={styles.summaryItem}>
                           <View style={styles.summaryHeader}>
                             <View style={styles.summaryIconContainer}>
                               <Text style={styles.summaryIcon}>
-                                {report.type === 'büyükşehir' ? '🏛️' : '🏢'}
+                                {municipality.type === 'büyükşehir' ? '🏛️' : '🏢'}
                               </Text>
                             </View>
                             <View style={styles.summaryTextContainer}>
-                              <Text style={styles.summaryName}>{report.name}</Text>
+                              <Text style={styles.summaryName}>{municipality.name}</Text>
                               <Text style={styles.summaryType}>
-                                {report.type === 'büyükşehir' ? 'Büyükşehir' : report.name.includes('İlçe') ? 'İlçe' : 'İl'} Belediyesi
+                                {municipality.type === 'büyükşehir' ? 'Büyükşehir' : municipality.name.includes('İlçe') ? 'İlçe' : 'İl'} Belediyesi
                               </Text>
                             </View>
                           </View>
                           <View style={styles.percentageRow}>
                             <View style={styles.totalItem}>
                               <Text style={styles.totalLabel}>Toplam Worite Puanı</Text>
-                              <Text style={styles.totalCount}>{report.totalSubmissions}</Text>
+                              <Text style={styles.totalCount}>{reportData.totalSubmissions}</Text>
                               <Text style={styles.voteCountText}>Puanlama</Text>
                             </View>
                             <View style={styles.percentageItem}>
                               <Text style={styles.percentageLabel}>👍</Text>
                               <View style={styles.voteCountContainer}>
-                                <Text style={styles.voteCountNumber}>{report.positiveVotes}</Text>
+                                <Text style={styles.voteCountNumber}>{reportData.positiveVotes}</Text>
                                 <Text style={styles.voteCountText}>Puanlama</Text>
                               </View>
                             </View>
                             <View style={styles.percentageItem}>
                               <Text style={styles.percentageLabel}>👎</Text>
                               <View style={styles.voteCountContainer}>
-                                <Text style={styles.voteCountNumber}>{report.negativeVotes}</Text>
+                                <Text style={styles.voteCountNumber}>{reportData.negativeVotes}</Text>
                                 <Text style={styles.voteCountText}>Puanlama</Text>
                               </View>
                             </View>
                           </View>
                         </View>
                       );
-                    })}
+                    }) : (
+                      <View style={styles.noDataContainer}>
+                        <Text style={styles.noDataText}>Konum bilgisi bulunamadı</Text>
+                      </View>
+                    )}
                 </View>
               </Card.Content>
             </Card>
@@ -463,15 +481,29 @@ export default function ReportsScreen() {
                     <Title style={styles.sectionTitle}>Worite Puan Şampiyonu</Title>
                   </View>
                   {(() => {
-                    // Net olumlu puana (olumlu - olumsuz) göre şampiyonu bul
+                    // En iyi belediyeyi bul - net olumlu puan ve toplam değerlendirme sayısına göre
                     const bestMunicipality = reports.reduce((best, current) => {
+                      // Net olumlu puan hesapla
                       const bestNet = best.positiveVotes - best.negativeVotes;
                       const currentNet = current.positiveVotes - current.negativeVotes;
+                      
+                      // Toplam değerlendirme sayısı
+                      const bestTotal = best.positiveVotes + best.negativeVotes;
+                      const currentTotal = current.positiveVotes + current.negativeVotes;
+                      
+                      // Eğer net puanlar eşitse, daha fazla değerlendirme alanı tercih et
+                      if (currentNet === bestNet) {
+                        return currentTotal > bestTotal ? current : best;
+                      }
+                      
+                      // Net puanı daha yüksek olanı seç
                       return currentNet > bestNet ? current : best;
                     });
+                    
                     const totalVotes = bestMunicipality.positiveVotes + bestMunicipality.negativeVotes;
                     const positivePercentage = totalVotes > 0 ? Math.round((bestMunicipality.positiveVotes / totalVotes) * 100) : 0;
                     const netScore = bestMunicipality.positiveVotes - bestMunicipality.negativeVotes;
+                    
                     return (
                       <View style={styles.bestItem}>
                         <View style={styles.bestHeader}>
@@ -489,10 +521,13 @@ export default function ReportsScreen() {
                         </View>
                         <View style={styles.bestPercentageContainer}>
                           <Text style={styles.bestPercentageLabel}>Net Olumlu Puan: {netScore}</Text>
+                          <Text style={styles.bestPercentageLabel}>Toplam Değerlendirme: {totalVotes}</Text>
+                          <Text style={styles.bestPercentageLabel}>Olumlu Oran: %{positivePercentage}</Text>
                         </View>
                         <View style={styles.bestNote}>
                           <Text style={styles.bestNoteText}>
-                            Görünüşe göre net en yüksek olumlu puana sahip belediye "{bestMunicipality.name.replace(' Büyükşehir Belediyesi', '').replace(' Belediyesi', '')}"
+                            En yüksek net olumlu puana sahip belediye "{bestMunicipality.name.replace(' Büyükşehir Belediyesi', '').replace(' Belediyesi', '')}" 
+                            ({netScore > 0 ? '+' : ''}{netScore} puan)
                           </Text>
                         </View>
                       </View>
@@ -1057,5 +1092,15 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: 'bold',
     color: 'white',
+  },
+  noDataContainer: {
+    padding: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  noDataText: {
+    fontSize: 16,
+    color: '#64748b',
+    textAlign: 'center',
   },
 }); 
