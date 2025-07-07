@@ -124,6 +124,79 @@ export default function ReportsScreen() {
       const storedEvaluations = await AsyncStorage.getItem('evaluations');
       let allEvaluations = storedEvaluations ? JSON.parse(storedEvaluations) : [];
       
+      // Eğer hiç değerlendirme yoksa, varsayılan belediye listesi oluştur
+      if (allEvaluations.length === 0) {
+        const defaultMunicipalities = [
+          {
+            id: 'gaziantep-buyuksehir',
+            name: 'Gaziantep Büyükşehir',
+            type: 'büyükşehir' as const,
+            totalSubmissions: 0,
+            positiveVotes: 0,
+            negativeVotes: 0,
+            topSubmissions: [],
+            coordinates: {
+              latitude: 37.0662,
+              longitude: 37.3833,
+            },
+          },
+          {
+            id: 'sahinbey',
+            name: 'Şahinbey',
+            type: 'ilçe' as const,
+            totalSubmissions: 0,
+            positiveVotes: 0,
+            negativeVotes: 0,
+            topSubmissions: [],
+            coordinates: {
+              latitude: 37.0662,
+              longitude: 37.3833,
+            },
+          },
+          {
+            id: 'sehitkamil',
+            name: 'Şehitkamil',
+            type: 'ilçe' as const,
+            totalSubmissions: 0,
+            positiveVotes: 0,
+            negativeVotes: 0,
+            topSubmissions: [],
+            coordinates: {
+              latitude: 37.0662,
+              longitude: 37.3833,
+            },
+          },
+          {
+            id: 'nurdagi',
+            name: 'Nurdağı',
+            type: 'ilçe' as const,
+            totalSubmissions: 0,
+            positiveVotes: 0,
+            negativeVotes: 0,
+            topSubmissions: [],
+            coordinates: {
+              latitude: 37.0662,
+              longitude: 37.3833,
+            },
+          },
+          {
+            id: 'araban',
+            name: 'Araban',
+            type: 'ilçe' as const,
+            totalSubmissions: 0,
+            positiveVotes: 0,
+            negativeVotes: 0,
+            topSubmissions: [],
+            coordinates: {
+              latitude: 37.0662,
+              longitude: 37.3833,
+            },
+          }
+        ];
+        setReports(defaultMunicipalities);
+        return;
+      }
+      
       // Belediyeleri ve sayaçları gerçek değerlendirmelerden oluştur
       const municipalityMap: { [id: string]: MunicipalityReport } = {};
       allEvaluations.forEach((evaluation: any) => {
