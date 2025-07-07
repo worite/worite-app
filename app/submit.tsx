@@ -2,7 +2,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as ImagePicker from 'expo-image-picker';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
     Alert,
     Dimensions,
@@ -60,6 +60,20 @@ export default function SubmitScreen() {
   const [showCamera, setShowCamera] = useState(false);
   // const [cooldownInfo, setCooldownInfo] = useState<any>(null);
   // const [cooldownLoading, setCooldownLoading] = useState(true);
+
+  // Uygulama başlangıcında tüm verileri temizle
+  useEffect(() => {
+    clearAllData();
+  }, []);
+
+  const clearAllData = async () => {
+    try {
+      await AsyncStorage.removeItem('evaluations');
+      console.log('Tüm değerlendirme verileri temizlendi');
+    } catch (error) {
+      console.error('Veri temizleme hatası:', error);
+    }
+  };
 
   // useEffect(() => {
   //   // Test için: Değerlendirme verilerini sıfırla

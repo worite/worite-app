@@ -28,12 +28,23 @@ export default function MunicipalityDetailScreen() {
   const { municipalityId, municipalityName } = useLocalSearchParams();
   const [evaluations, setEvaluations] = useState<Evaluation[]>([]);
   const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [imageModalVisible, setImageModalVisible] = useState(false);
 
   useEffect(() => {
+    clearAllData();
     loadEvaluations();
   }, []);
+
+  const clearAllData = async () => {
+    try {
+      await AsyncStorage.removeItem('evaluations');
+      console.log('Municipality detail sayfasında tüm veriler temizlendi');
+    } catch (error) {
+      console.error('Veri temizleme hatası:', error);
+    }
+  };
 
   const loadEvaluations = async () => {
     try {

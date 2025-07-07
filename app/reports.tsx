@@ -65,6 +65,7 @@ export default function ReportsScreen() {
   const { locationData, selectedMunicipalities, allMunicipalities } = useLocation();
 
   useEffect(() => {
+    clearAllData();
     loadReports();
     if (locationData) {
       setMapRegion({
@@ -75,6 +76,15 @@ export default function ReportsScreen() {
       });
     }
   }, [locationData]);
+
+  const clearAllData = async () => {
+    try {
+      await AsyncStorage.removeItem('evaluations');
+      console.log('Reports sayfasında tüm veriler temizlendi');
+    } catch (error) {
+      console.error('Veri temizleme hatası:', error);
+    }
+  };
 
   // Font boyutunu hesapla
   useEffect(() => {
